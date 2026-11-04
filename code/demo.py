@@ -45,7 +45,8 @@ def main():
         return
 
     d = load_clips()
-    test = np.load(RESULTS / "raw" / "fold0.npz")["test_idx"]  # patients held out of fold 0's training
+    raw = a.model.resolve().parent.parent / "raw" / "fold0.npz"  # the results folder this model came from
+    test = np.load(raw)["test_idx"]  # patients held out of fold 0's training
     rng = np.random.default_rng()
     print(f"{'rhythm':<22}{'patient':<13}{'should':<10}{'P(shock)':>9}  answer")
     for cat in ["coarse VF", "rapid VT", "NSR", "other non-shockable", "asystole", "fine VF", "other VT"]:
