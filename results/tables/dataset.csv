@@ -1,0 +1,8 @@
+category,cudb,mitdb,vfdb,clips,patients
+coarse VF,713,24,532,1269,42
+rapid VT,2,0,440,442,16
+NSR,96,12165,3329,15590,57
+other non-shockable,73,2838,2174,5085,36
+asystole,0,0,147,147,6
+fine VF,1,0,1,2,2
+other VT,0,17,540,557,16

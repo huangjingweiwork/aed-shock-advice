@@ -1,0 +1,146 @@
+{
+ "small_fp32": {
+  "params": 4625,
+  "macs": 394608,
+  "sparsity": 0.0,
+  "file_kib": 24.42578125,
+  "gzip_kib": 19.017578125,
+  "peak_ram_kib": 19.375
+ },
+ "small_int8": {
+  "params": 4625,
+  "macs": 394608,
+  "sparsity": 0.0,
+  "file_kib": 13.1875,
+  "gzip_kib": 7.2587890625,
+  "peak_ram_kib": 4.84375
+ },
+ "small_dyn": {
+  "params": 4625,
+  "macs": 394608,
+  "sparsity": 0.0,
+  "file_kib": 14.3515625,
+  "gzip_kib": 9.6455078125,
+  "peak_ram_kib": 19.375
+ },
+ "large_fp32": {
+  "params": 501537,
+  "macs": 36678432,
+  "sparsity": 0.0,
+  "file_kib": 1974.50390625,
+  "gzip_kib": 1814.3076171875,
+  "peak_ram_kib": 117.375
+ },
+ "large_int8": {
+  "params": 501537,
+  "macs": 36678432,
+  "sparsity": 0.0,
+  "file_kib": 538.2421875,
+  "gzip_kib": 491.2490234375,
+  "peak_ram_kib": 29.34375
+ },
+ "large_dyn": {
+  "params": 501537,
+  "macs": 36678432,
+  "sparsity": 0.0,
+  "file_kib": 525.4453125,
+  "gzip_kib": 490.046875,
+  "peak_ram_kib": 117.375
+ },
+ "large_p75_fp32": {
+  "params": 282649,
+  "macs": 20659800,
+  "sparsity": 0.0,
+  "file_kib": 1121.41796875,
+  "gzip_kib": 1024.6708984375,
+  "peak_ram_kib": 88.03125
+ },
+ "large_p75_int8": {
+  "params": 282649,
+  "macs": 20659800,
+  "sparsity": 0.0,
+  "file_kib": 319.046875,
+  "gzip_kib": 280.90625,
+  "peak_ram_kib": 22.0078125
+ },
+ "large_p50_fp32": {
+  "params": 126097,
+  "macs": 9207184,
+  "sparsity": 0.0,
+  "file_kib": 510.82421875,
+  "gzip_kib": 459.6669921875,
+  "peak_ram_kib": 58.6875
+ },
+ "large_p50_int8": {
+  "params": 126097,
+  "macs": 9207184,
+  "sparsity": 0.0,
+  "file_kib": 159.5859375,
+  "gzip_kib": 130.625,
+  "peak_ram_kib": 14.671875
+ },
+ "large_p35_fp32": {
+  "params": 62347,
+  "macs": 4493854,
+  "sparsity": 0.0,
+  "file_kib": 262.3515625,
+  "gzip_kib": 229.513671875,
+  "peak_ram_kib": 40.34765625
+ },
+ "large_p35_int8": {
+  "params": 62347,
+  "macs": 4493854,
+  "sparsity": 0.0,
+  "file_kib": 93.421875,
+  "gzip_kib": 68.7294921875,
+  "peak_ram_kib": 10.0869140625
+ },
+ "scratch_k50_fp32": {
+  "params": 126097,
+  "macs": 9207184,
+  "sparsity": 0.0,
+  "file_kib": 510.83203125,
+  "gzip_kib": 457.9384765625,
+  "peak_ram_kib": 58.6875
+ },
+ "scratch_k50_int8": {
+  "params": 126097,
+  "macs": 9207184,
+  "sparsity": 0.0,
+  "file_kib": 159.59375,
+  "gzip_kib": 131.4794921875,
+  "peak_ram_kib": 14.671875
+ },
+ "scratch_k35_fp32": {
+  "params": 62347,
+  "macs": 4493854,
+  "sparsity": 0.0,
+  "file_kib": 262.3515625,
+  "gzip_kib": 228.423828125,
+  "peak_ram_kib": 40.34765625
+ },
+ "scratch_k35_int8": {
+  "params": 62347,
+  "macs": 4493854,
+  "sparsity": 0.0,
+  "file_kib": 93.421875,
+  "gzip_kib": 68.87890625,
+  "peak_ram_kib": 10.0869140625
+ },
+ "large_u75_fp32": {
+  "params": 501537,
+  "macs": 36678432,
+  "sparsity": 0.7499,
+  "file_kib": 1974.50390625,
+  "gzip_kib": 636.8623046875,
+  "peak_ram_kib": 117.375
+ },
+ "large_u75_int8": {
+  "params": 501537,
+  "macs": 36678432,
+  "sparsity": 0.7499,
+  "file_kib": 538.2421875,
+  "gzip_kib": 210.80078125,
+  "peak_ram_kib": 29.34375
+ }
+}
