@@ -18,7 +18,7 @@ os.environ.setdefault("TF_CPP_MIN_LOG_LEVEL", "2")
 import argparse, json, subprocess, sys, time
 from pathlib import Path
 import numpy as np, pandas as pd, tensorflow as tf
-from tensorflow import keras
+import keras
 from sklearn.model_selection import StratifiedGroupKFold
 from config import (RESULTS, SEED, FOLDS, EPOCHS, FT_EPOCHS, BATCH, N_CALIB, KEEPS, SCRATCH_KEEPS, SPARSITY)
 from data import load_clips
@@ -59,7 +59,7 @@ def run_fold(k, quick, out):
     X, y = d["X"], (d["shock"] == 1).astype(np.float32)
     tr, va, te = split(d, k)
     epochs, ft_epochs = (2, 1) if quick else (EPOCHS, FT_EPOCHS)
-    tf.keras.utils.set_random_seed(SEED + k)
+    keras.utils.set_random_seed(SEED + k)
     calib = X[np.random.default_rng(SEED + k).choice(tr, N_CALIB, replace=False)]
     log = lambda msg: print(f"[fold {k} {(time.time() - t0) / 60:5.1f} min] {msg}", flush=True)
     log(f"train {len(tr)}  val {len(va)}  test {len(te)} clips")

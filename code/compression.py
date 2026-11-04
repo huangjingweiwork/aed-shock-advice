@@ -1,7 +1,7 @@
 """The compression tools: structured pruning, unstructured pruning, and int8 quantisation via TensorFlow Lite."""
 import gzip, time
 import numpy as np, tensorflow as tf
-from tensorflow import keras
+import keras
 from models import large
 
 

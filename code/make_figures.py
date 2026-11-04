@@ -58,7 +58,7 @@ def fig_examples(z):
 
 def fig_quantisation(raw, summary):
     """(a) one layer's weights and the int8 grid; (b) float32 vs int8 output for the same test clips."""
-    from tensorflow import keras
+    import keras
     m = keras.models.load_model(RESULTS / "models" / "large_fp32.keras")
     w = m.get_layer("b2a").kernel.numpy()[..., 0].ravel()  # all weights of output filter 0 in layer b2a
     step = np.abs(w).max() / 127  # symmetric per-channel int8: one step = max|w| / 127
@@ -87,7 +87,7 @@ def fig_quantisation(raw, summary):
 
 def fig_pruning_l1():
     """Sorted filter L1 norms in one layer, with the filters a 50% prune keeps."""
-    from tensorflow import keras
+    import keras
     m = keras.models.load_model(RESULTS / "models" / "large_fp32.keras")
     s = np.sort(l1(m.get_layer("b4a").kernel.numpy()))[::-1]
     keep = len(s) // 2

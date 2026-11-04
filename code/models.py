@@ -1,6 +1,6 @@
 """The two network designs. Both read one 5 s clip (625 samples) and output P(shockable)."""
-from tensorflow import keras
-from tensorflow.keras import layers
+import keras
+from keras import layers
 
 
 def small(n=625):
