@@ -36,7 +36,7 @@ Research questions:
 | `code/config.py` | All settings: paths, clip format, training budget, chip budget, AHA targets |
 | `code/data.py` | Downloads CUDB, VFDB and MIT-BIH from PhysioNet; cuts 5 s single-lead clips at 125 Hz; labels them by AHA category |
 | `code/models.py` | The small CNN and the large 1D ResNet |
-| `code/compression.py` | Structured (L1 filter) pruning, unstructured pruning, TFLite float32 / dynamic-range / full-integer int8 conversion, memory and latency measurement |
+| `code/compress.py` | Structured (L1 filter) pruning, unstructured pruning, TFLite float32 / dynamic-range / full-integer int8 conversion, memory and latency measurement |
 | `code/evaluate.py` | AHA scoring with patient-bootstrap lower confidence limits; threshold selection on validation patients |
 | `code/run_experiments.py` | Trains, prunes, converts and scores every model on each patient-wise fold |
 | `code/summarise.py` | Pools the folds into the result tables and `RESULTS.md` |

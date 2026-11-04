@@ -10,7 +10,7 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import config
 from config import CLIPS, AHA, FS, FLASH_BYTES
-from compression import l1
+from compress import l1
 
 RESULTS = config.RESULTS.parent / "results_quick" if "--quick" in sys.argv else config.RESULTS
 FIG = RESULTS / "figures"

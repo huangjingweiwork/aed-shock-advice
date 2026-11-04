@@ -12,7 +12,7 @@ import numpy as np, pandas as pd
 from sklearn.metrics import roc_auc_score
 import config
 from config import CLIPS, AHA, FLASH_BYTES, RAM_BYTES, MCU_HZ, MACS_PER_CYCLE
-from compression import latency_ms
+from compress import latency_ms
 from evaluate import aha_table, choose_threshold
 
 STAGES = ["fp32", "dyn", "noft_fp32", "int8"]

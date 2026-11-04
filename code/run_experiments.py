@@ -23,7 +23,7 @@ from sklearn.model_selection import StratifiedGroupKFold
 from config import (RESULTS, SEED, FOLDS, EPOCHS, FT_EPOCHS, BATCH, N_CALIB, KEEPS, SCRATCH_KEEPS, SPARSITY)
 from data import load_clips
 from models import small, large, count_macs
-from compression import (prune_structured, prune_unstructured, KeepPruned, sparsity_of, to_tflite_fp32,
+from compress import (prune_structured, prune_unstructured, KeepPruned, sparsity_of, to_tflite_fp32,
                          to_tflite_dynamic, to_tflite_int8, run_tflite, peak_activation_bytes, gzip_bytes)
 
 

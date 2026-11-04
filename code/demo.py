@@ -14,7 +14,7 @@ warnings.filterwarnings("ignore")
 from pathlib import Path
 import numpy as np, wfdb
 from config import RESULTS, RAW, WIN, FS
-from compression import run_tflite
+from compress import run_tflite
 from data import load_clips, preprocess, LEAD
 
 DEFAULT = RESULTS / "models" / "large_p35_int8.tflite"  # best int8 model that fits the chip
