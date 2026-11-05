@@ -6,7 +6,7 @@ Research questions:
 1. How far can the model be compressed and still meet the AHA rhythm targets on an AED-class chip?
 2. Is it better to compress a big model or to train a small one from the start?
 
-**Key results:** see [`results/RESULTS.md`](results/RESULTS.md) and the report, [`report/report.pdf`](report/report.pdf).
+**Key results:** see [`results/RESULTS.md`](results/RESULTS.md). The written report is submitted separately.
 
 ## Data: five PhysioNet databases, 863 people
 
@@ -50,7 +50,6 @@ Research questions:
 | `dl_extra.py`, `check_sddb_vf.py` | Download the two added databases; plot the SDDB VF onsets to check the labels by eye |
 | `data/` | The dataset table and the two label-check images (the ECG data itself is downloaded, not stored) |
 | `results/` | Tables (`tables/*.csv`), figures (`figures/*.png`), the fold-0 `.tflite` models (`models/`), raw per-fold predictions (`raw/`), the calibration study (`calib/`) and `RESULTS.md` |
-| `report/` | The final report (`report.pdf`, `report.docx`), its Markdown source and the script that builds it |
 | `colab/` | `aed_shock_advice.ipynb`, the whole pipeline as one Colab notebook |
 
 | Script | Step |

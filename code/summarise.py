@@ -37,7 +37,7 @@ RESULTS = config.RESULTS.parent / "results_quick" if "--quick" in sys.argv else 
 
 
 def by_source(z, prob, out, models=("large_fp32", "scratch_k50_fp32", "scratch_k50_int8", "small_int8")):
-    """Share of clips decided correctly at threshold 0.5, by source database and shock / no-shock (report Table 5).
+    """Share of clips decided correctly at threshold 0.5, by source database and shock / no-shock (the by-source table in the report).
     CinC 2015 alarms are split into true VF, other true alarms and false alarms; in-between rhythms are left out."""
     db, shock = z["db"], z["shock"]
     sub = z["subtype"] if "subtype" in z.files else np.full(len(db), "", object)
