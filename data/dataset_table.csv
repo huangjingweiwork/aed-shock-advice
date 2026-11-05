@@ -1,0 +1,11 @@
+,cinc2015,cudb,mitdb,sddb,vfdb,clips,people
+coarse VF,6,697,24,342,269,1338,66
+rapid VT,0,2,0,0,372,374,16
+NSR,0,96,2340,900,848,4184,72
+other non-shockable,624,73,970,1020,542,3229,677
+asystole,22,0,0,0,94,116,28
+fine VF,0,1,0,2,1,4,3
+other VT,89,0,17,0,398,504,105
+NO-SHOCK total,0,0,0,0,0,7529,732
+SHOCK total,0,0,0,0,0,1712,79
+in-between total,0,0,0,0,0,508,107

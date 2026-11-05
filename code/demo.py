@@ -17,7 +17,7 @@ from config import RESULTS, RAW, WIN, FS
 from compress import run_tflite
 from data import load_clips, preprocess, LEAD
 
-DEFAULT = RESULTS / "models" / "large_p35_int8.tflite"  # best int8 model that fits the chip
+DEFAULT = RESULTS / "models" / "scratch_k50_int8.tflite"  # v2: best int8 model that fits the chip
 
 
 def main():

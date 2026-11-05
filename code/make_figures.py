@@ -79,8 +79,8 @@ def fig_quantisation(raw, summary):
     b.set_title("(b) Large model: float32 vs int8 output", loc="left")
     b.set_xlabel("P(shock), float32")
     b.set_ylabel("P(shock), int8")
-    b.text(0.03, 0.95, f"{len(te):,} test clips\n{flips} decisions flip at 0.5", transform=b.transAxes, va="top",
-           color=INK2, fontsize=8)
+    b.text(0.97, 0.04, f"{len(te):,} test clips\n{flips} decisions flip at 0.5", transform=b.transAxes, va="bottom",
+           ha="right", color=INK2, fontsize=8, bbox=dict(facecolor="white", edgecolor="none", pad=1.5))
     fig.tight_layout()
     save(fig, "fig3_quantisation.png")
 
@@ -138,10 +138,12 @@ def fig_headline(summary):
         ax.scatter(g.file_kib, g["passed_0.5"], s=60, color=col, marker=mk, label=label, zorder=3,
                    edgecolors="white", linewidths=1.5)
         for _, r in g.iterrows():  # short labels; points sharing a size are split above / below
-            dy = {"large_u75": -13, "scratch_k35": -13, "scratch_k50": -13, "large_p75": -13}.get(r.family, 9)
+            dy = {"large_u75": -13, "scratch_k35": -13, "large_p75": -13}.get(r.family, 9)
+            dx, ha = (-4, "right") if dy > 0 else (4, "left")
+            if r.family == "large_p50":  # v2: keep clear of the pruned-35% label on its left
+                dx, ha = 4, "left"
             ax.annotate(SHORT[r.family], (r.file_kib, r["passed_0.5"]), textcoords="offset points",
-                        xytext=(-4 if dy > 0 else 4, dy), fontsize=7.5, color=INK2, va="center",
-                        ha="right" if dy > 0 else "left")
+                        xytext=(dx, dy), fontsize=7.5, color=INK2, va="center", ha=ha)
     ax.axvline(FLASH_BYTES / 1024, color=INK, lw=1, ls="--")
     ax.text(FLASH_BYTES / 1024 * 0.93, 5.25, "chip flash: 256 KiB", ha="right", color=INK, fontsize=8)
     ax.set_xscale("log")
@@ -161,8 +163,8 @@ def fig_headline(summary):
 
 def fig_per_category(aha):
     """Score per AHA category for the main contenders, against each goal."""
-    models = [("large_fp32", "Large, float32 (reference, too big)", C1), ("large_p35_int8", "Large pruned to 35% + int8", C3),
-              ("scratch_k35_int8", "35%-width from scratch + int8", C2), ("small_int8", "Small + int8", C4)]
+    models = [("large_fp32", "Large, float32 (reference, too big)", C1), ("large_p50_int8", "Large pruned to 50% + int8", C3),
+              ("scratch_k50_int8", "50%-width from scratch + int8", C2), ("small_int8", "Small + int8", C4)]
     cats = [c for c, *_ in AHA]
     t = aha[aha.threshold.astype(str) == "0.5"]
     fig, ax = plt.subplots(figsize=(7.2, 3.4))

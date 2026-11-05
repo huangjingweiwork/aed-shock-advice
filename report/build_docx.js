@@ -43,7 +43,12 @@ function table(rows) {
   // column widths proportional to the longest text in each column (min share)
   // header text may wrap, so it counts by its longest word; body cells count in full
   const word = t => Math.max(...t.split(/\s+/).map(w => w.length));
-  const len = header.map((h, j) => Math.max(word(h) + 1, ...body.map(r => (r[j] || "").replace(/\*/g, "").length), 4));
+  // a ✗ is drawn wider than a digit, so it counts as 3; the first (label) column may wrap, so it is capped
+  const cellLen = c => (c || "").replace(/\*/g, "").length + ((c || "").includes("✗") ? 2 : 0);
+  const len = header.map((h, j) => {
+    const l = Math.max(word(h) + 1, ...body.map(r => cellLen(r[j])), 4);
+    return j === 0 && n > 6 ? Math.min(l, 18) : l;
+  });
   const fs_ = n > 8 ? 16 : 18;
   const tot = len.reduce((a, b) => a + b, 0);
   let widths = len.map(l => Math.max(500, Math.round((TEXT_W * l) / tot)));
@@ -58,7 +63,7 @@ function table(rows) {
       shading: head ? { type: ShadingType.CLEAR, fill: "E8EEF7", color: "auto" } : undefined,
       margins: { top: 40, bottom: 40, left: 80, right: 80 },
       children: [new Paragraph({ children: runs(c, { size: fs_, bold: head || undefined }),
-                                 alignment: j > 0 && /^[\d.,%<>≥−\-–+ ]+$/.test(c) ? AlignmentType.RIGHT : AlignmentType.LEFT })],
+                                 alignment: j > 0 && /^[\d.,%<>≥−\-–+ ✗/]+$/.test(c) ? AlignmentType.RIGHT : AlignmentType.LEFT })],
     })),
   });
   return new Table({ width: { size: TEXT_W, type: WidthType.DXA }, columnWidths: widths, layout: TableLayoutType.FIXED,

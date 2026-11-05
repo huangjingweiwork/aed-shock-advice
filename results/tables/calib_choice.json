@@ -1,0 +1,9 @@
+{
+ "chosen_rule": "nosat300",
+ "val_flips": {
+  "nosat300": 2821,
+  "random300": 4040,
+  "stratified300": 4229,
+  "random1000": 4714
+ }
+}

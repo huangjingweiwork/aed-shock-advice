@@ -36,6 +36,28 @@ def md_table(df):
 RESULTS = config.RESULTS.parent / "results_quick" if "--quick" in sys.argv else config.RESULTS
 
 
+def by_source(z, prob, out, models=("large_fp32", "scratch_k50_fp32", "scratch_k50_int8", "small_int8")):
+    """Share of clips decided correctly at threshold 0.5, by source database and shock / no-shock (report Table 5).
+    CinC 2015 alarms are split into true VF, other true alarms and false alarms; in-between rhythms are left out."""
+    db, shock = z["db"], z["shock"]
+    sub = z["subtype"] if "subtype" in z.files else np.full(len(db), "", object)
+    name = {"cudb": "CUDB", "vfdb": "VFDB", "mitdb": "MIT-BIH", "sddb": "SDDB", "cinc2015": "CinC 2015"}
+    group = np.full(len(db), "", object)
+    for i in np.flatnonzero(shock >= 0):
+        if db[i] == "cinc2015":
+            group[i] = ("CinC 2015: false alarms (no shock)" if str(sub[i]).startswith("false") else
+                        "CinC 2015: true VF (shock)" if shock[i] == 1 else
+                        "CinC 2015: true asystole / slow / fast (no shock)")
+        else:
+            group[i] = f"{name[db[i]]}: {'shockable' if shock[i] == 1 else 'non-shockable'}"
+    rows = []
+    for g in sorted(set(group) - {""}):
+        m = (group == g) & ~np.isnan(prob[models[0]])
+        rows.append(dict(group=g, clips=int(m.sum()),
+                         **{n: float(((prob[n][m] >= 0.5) == (shock[m] == 1)).mean()) for n in models if n in prob}))
+    pd.DataFrame(rows).to_csv(out / "by_source.csv", index=False)
+
+
 def main():
     z = np.load(CLIPS, allow_pickle=True)
     cat, pat, shock = z["category"], z["patient"], z["shock"]
@@ -103,6 +125,7 @@ def main():
     data["patients"] = meta.groupby("category")["patient"].nunique()
     data = data.reindex(SHOWN).reset_index()
     data.to_csv(out / "dataset.csv", index=False)
+    by_source(z, prob, out)
 
     # ---- RESULTS.md: the human-readable version
     goals = {c: f"{'Se' if m == 'sensitivity' else 'Sp'} > {g:.0%}" for c, m, g, _ in AHA}

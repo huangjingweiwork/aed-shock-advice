@@ -60,7 +60,10 @@ def run_fold(k, quick, out):
     tr, va, te = split(d, k)
     epochs, ft_epochs = (2, 1) if quick else (EPOCHS, FT_EPOCHS)
     keras.utils.set_random_seed(SEED + k)
-    calib = X[np.random.default_rng(SEED + k).choice(tr, N_CALIB, replace=False)]
+    # v2: calibration rule chosen on validation patients by code/calib_study.py: 300 random training clips that do not
+    # hit the +-5 mV clipping limit (artefacts stretch the int8 activation ranges)
+    from calib_study import calib_idx
+    calib = X[calib_idx("nosat300", 0, tr, X, d["category"], k)]
     log = lambda msg: print(f"[fold {k} {(time.time() - t0) / 60:5.1f} min] {msg}", flush=True)
     log(f"train {len(tr)}  val {len(va)}  test {len(te)} clips")
 
@@ -102,6 +105,9 @@ def run_fold(k, quick, out):
                                    peak_ram_kib=peak_activation_bytes(blob) / 1024)
         if k == 0 and fam == "large":
             m.save(mdir / "large_fp32.keras")  # kept for the weight / filter figures
+        kdir = out / "keras" / f"fold{k}"  # v2: every trained model, for the calibration study
+        kdir.mkdir(parents=True, exist_ok=True)
+        m.save(kdir / f"{fam}.keras")
     log("converted and scored all .tflite files")
 
     raw = out / "raw"

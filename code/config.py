@@ -10,7 +10,9 @@ RESULTS = ROOT / "results"
 # Signal: one ECG lead, 5 s clips at 125 Hz = 625 samples per clip
 FS, WIN_S = 125, 5
 WIN = FS * WIN_S
-DATABASES = ("cudb", "vfdb", "mitdb")
+DATABASES = ("cudb", "vfdb", "mitdb")          # v1 sources: rhythm-annotated recordings
+EXTRA = ("challenge-2015_training", "sddb")      # v2 sources: ICU arrhythmia alarms, sudden-death Holter
+CAP = 60  # at most this many clips (5 min) per person per rhythm category, spread evenly over the recording
 
 # Training
 SEED, FOLDS = 0, 5

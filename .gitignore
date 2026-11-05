@@ -1,5 +1,9 @@
-data/
+data/*
+!data/dataset_table.csv
+!data/*_check.png
+results/keras/
 results_quick/
 __pycache__/
 .venv/
 *.pyc
+results/**/*.log

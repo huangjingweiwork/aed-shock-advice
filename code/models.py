@@ -25,7 +25,7 @@ def large(n=625, keep=1.0):
     x = layers.Conv1D(w(32), 15, strides=2, padding="same", activation="relu", name="c0")(x)
     for i, f in enumerate([32, 64, 96, 128], 1):
         y = layers.Conv1D(w(f), 9, padding="same", activation="relu", name=f"b{i}a")(x)
-        y = layers.BatchNormalization(name=f"b{i}bn")(y)
+        y = layers.BatchNormalization(momentum=0.9, name=f"b{i}bn")(y)  # v2: 0.9 (Keras default 0.99 lagged with ~50 steps/epoch)
         y = layers.Conv1D(w(f), 9, padding="same", name=f"b{i}b")(y)
         # shortcut: a 1x1 conv when the channel count changes, otherwise the input itself
         x = layers.Conv1D(w(f), 1, padding="same", name=f"b{i}s")(x) if x.shape[-1] != w(f) else x
