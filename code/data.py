@@ -143,9 +143,9 @@ def _seconds(hms):
     return 3600 * h + 60 * m + s
 
 
-def cinc_clips():
+def cinc_clips(win=WIN):
     """PhysioNet/CinC 2015 ICU alarms. Each record ends with an expert-reviewed alarm at 300 s; the event starts
-    in the 10 s before it, so the clip is the 5 s just before the alarm (295-300 s).
+    in the 10 s before it, so the clip is the `win` samples just before the alarm (295-300 s for a 5 s clip).
 
     True VF / asystole alarms give VF / asystole clips; true bradycardia and tachycardia alarms give other
     non-shockable clips. True VT alarms are kept as report-only "other VT": the alarm fires on 5 ventricular beats,
@@ -161,10 +161,10 @@ def cinc_clips():
         if lead is None:
             continue
         raw = sig[:, f["sig_name"].index(lead)]
-        w = raw[int(295 * f["fs"]):int(300 * f["fs"])]
-        if len(w) < 5 * f["fs"] or np.isnan(w).any():
+        w = raw[int((300 - win / FS) * f["fs"]):int(300 * f["fs"])]
+        if len(w) < win / FS * f["fs"] or np.isnan(w).any():
             continue  # signal dropout in the alarm window
-        x = preprocess(raw[:int(300 * f["fs"])], f["fs"])[-WIN:]
+        x = preprocess(raw[:int(300 * f["fs"])], f["fs"])[-win:]
         true = verdict.lower().startswith("true")
         group = CINC_GROUP[kind] if true else "OTHER"
         if group == "VT_ALARM":
@@ -173,11 +173,11 @@ def cinc_clips():
             cat = aha_category(group, x)
         if cat is None:
             continue
-        yield x, dict(db="cinc2015", record=rec, patient=f"cinc2015/{rec}", start_s=295.0, category=cat,
+        yield x, dict(db="cinc2015", record=rec, patient=f"cinc2015/{rec}", start_s=300 - win / FS, category=cat,
                       shock=SHOCK[cat], subtype=("true " if true else "false ") + kind)
 
 
-def sddb_clips():
+def sddb_clips(win=WIN):
     """Sudden Cardiac Death Holter Database: VF from the published onset time (the per-record SDDB_VF_S seconds), and
     NSR / AF clips from the annotated rhythm well before the onset, skipping clips with ventricular beats."""
     folder = RAW / "sddb"
@@ -189,10 +189,10 @@ def sddb_clips():
         onset = _seconds(SDDB_VF_ONSET[rec]) if rec in SDDB_VF_ONSET else None
         pid = f"sddb/{rec}"
         if onset is not None:
-            for s in range(onset * FS, min(n, (onset + SDDB_VF_S[rec]) * FS) - WIN + 1, WIN):
-                cat = aha_category("VF", x[s:s + WIN])
+            for s in range(onset * FS, min(n, (onset + SDDB_VF_S[rec]) * FS) - win + 1, win):
+                cat = aha_category("VF", x[s:s + win])
                 if cat:
-                    yield x[s:s + WIN], dict(db="sddb", record=rec, patient=pid, start_s=s / FS, category=cat,
+                    yield x[s:s + win], dict(db="sddb", record=rec, patient=pid, start_s=s / FS, category=cat,
                                              shock=SHOCK[cat], subtype="VF after onset")
         a = wfdb.rdann(str(folder / rec), "ari")
         notes = [(int(s * FS / f["fs"]), x_[1:].strip("\x00")) for s, x_ in zip(a.sample, a.aux_note)
@@ -200,11 +200,11 @@ def sddb_clips():
         beats = np.array([int(s * FS / f["fs"]) for s, c in zip(a.sample, a.symbol) if c in VENTRICULAR])
         stop = n if onset is None else (onset - SDDB_GAP_S) * FS
         for (s0, r), (e0, _) in zip(notes, notes[1:] + [(n, None)]):
-            for s in range(s0, min(e0, stop) - WIN + 1, WIN):
-                if len(beats) and ((beats >= s) & (beats < s + WIN)).any():
+            for s in range(s0, min(e0, stop) - win + 1, win):
+                if len(beats) and ((beats >= s) & (beats < s + win)).any():
                     continue
                 cat = "NSR" if r == "N" else "other non-shockable"
-                yield x[s:s + WIN], dict(db="sddb", record=rec, patient=pid, start_s=s / FS, category=cat,
+                yield x[s:s + win], dict(db="sddb", record=rec, patient=pid, start_s=s / FS, category=cat,
                                          shock=SHOCK[cat], subtype=r)
 
 
@@ -217,10 +217,10 @@ def cap_per_person(meta, cap):
     return np.sort(np.array(keep))
 
 
-def build_clips_v2():
-    """v1 sources plus CinC 2015 and SDDB, capped per person; writes data/clips.npz (+ data/clips_meta.csv)."""
+def collect(win=WIN):
+    """Every labelled clip of `win` samples from all five databases, before the per-person cap."""
     X, meta = [], []
-    for db in DATABASES:  # v1 loop, unchanged
+    for db in DATABASES:  # v1 loop, unchanged apart from the clip length
         for hea in sorted((RAW / db).glob("*.hea")):
             rec = hea.stem
             sig, f = wfdb.rdsamp(str(RAW / db / rec))
@@ -231,24 +231,28 @@ def build_clips_v2():
             x = preprocess(raw, f["fs"])
             track = track[(np.arange(len(x)) * f["fs"] / FS).astype(int)]
             pid = SAME_PATIENT.get(f"{db}/{rec}", f"{db}/{rec}")
-            for s in range(0, len(x) - WIN + 1, WIN):
-                g = set(track[s:s + WIN])
+            for s in range(0, len(x) - win + 1, win):
+                g = set(track[s:s + win])
                 if len(g) != 1 or None in g:
                     continue
-                cat = aha_category(g.pop(), x[s:s + WIN])
+                cat = aha_category(g.pop(), x[s:s + win])
                 if cat is None:
                     continue
-                X.append(x[s:s + WIN].astype(np.float32))
+                X.append(x[s:s + win].astype(np.float32))
                 meta.append(dict(db=db, record=rec, patient=pid, start_s=s / FS, category=cat, shock=SHOCK[cat],
                                  subtype=""))
         print("read", db, flush=True)
     for gen, name in [(cinc_clips, "cinc2015"), (sddb_clips, "sddb")]:
-        for x, m in gen():
+        for x, m in gen(win):
             X.append(np.asarray(x, np.float32))
             meta.append(m)
         print("read", name, flush=True)
-    meta = pd.DataFrame(meta)
-    X = np.stack(X)
+    return np.stack(X), pd.DataFrame(meta)
+
+
+def build_clips_v2():
+    """v1 sources plus CinC 2015 and SDDB, capped per person; writes data/clips.npz (+ data/clips_meta.csv)."""
+    X, meta = collect(WIN)
     np.savez_compressed(CLIPS.with_name("clips_all.npz"), X=X, **{c: meta[c].values for c in meta})  # uncapped
     before = table(meta)
     keep = cap_per_person(meta, CAP)

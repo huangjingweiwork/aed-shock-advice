@@ -5,6 +5,7 @@ ESP3201A final project (NUS, 2026). An automated external defibrillator (AED) de
 Research questions:
 1. How far can the model be compressed and still meet the AHA rhythm targets on an AED-class chip?
 2. Is it better to compress a big model or to train a small one from the start?
+3. How many seconds of ECG does the model need? (clips of 3 to 10 s; today's AEDs take about 10 s to analyse)
 
 **Key results:** see [`results/RESULTS.md`](results/RESULTS.md). The written report is submitted separately.
 
@@ -33,10 +34,11 @@ Research questions:
 | 35%-width model trained from scratch, int8 | 93 KiB | 10 KiB | Yes | 1 |
 | Small CNN (4.6k weights), int8 | 13 KiB | 5 KiB | Yes | 2 |
 
-- **Best model that fits the chip:** the 50%-width network trained from scratch, in int8. It is 12× smaller than the reference and passes fast VT, normal rhythm and other non-shockable. It misses coarse VF by 1.4 points (88.6% vs 90%) and asystole by 1 point (94.0% vs 95%).
+- **Best model that fits the chip:** the 50%-width network trained from scratch, in int8. It is 12× smaller than the reference and passes fast VT, normal rhythm and other non-shockable. It misses coarse VF by 1.4 points (88.6% vs 90%) and asystole by 1 point (94.0% vs 95%). This was its best run: retrained with four other seeds (same clips, same people), it passed 1-2 rows in int8 and 2-3 in float32, so a typical chip-sized run passes about 2.
 - **The bottleneck is int8, not size.** The same model in float32 passes 4 of 5. Full-integer int8 changes 2–7% of the compressed models' decisions, mostly costing VF sensitivity. Quantisation-aware training is the next step.
 - **Calibration matters.** int8 results depended strongly on which clips calibrate the activations. Of 4 rules compared on validation patients, calibrating on 300 clips without clipping artefacts changed the fewest decisions (30% fewer than random clips) and is used for every int8 result ([`code/calib_study.py`](code/calib_study.py)).
-- **Train small beats prune:** at the same shape, the from-scratch models matched or beat the pruned ones, and lost fewer decisions to int8 (194 vs 297 at 50% width).
+- **Pruning brought no advantage over training small:** at the same shape, the from-scratch models matched or beat the pruned ones and lost fewer decisions to int8 (194 vs 297 at 50% width). Allowing for the seed-to-seed spread above, the 50% comparison is a draw.
+- **5 s of ECG is enough:** clips of 3 to 10 s, four seeds each, gave no length that was clearly more accurate (AUROC flat at about 0.97-0.99). Longer clips made the 50%-width model more cautious (higher specificity, lower coarse-VF sensitivity), cost more RAM and compute, and delay the decision. At 5 s the decision is ready after about 5.2 s, against about 9 s of analysis in a ZOLL AED Plus ([`code/window_study.py`](code/window_study.py), `results/windows/`, `results/figures/fig10_clip_length.png`).
 - **Unstructured pruning** (zeroed weights) does not shrink the on-chip model at all (still 538 KiB).
 - **The new data is harder.** On the first version of this project (100 patients from 3 databases, commit `cc7bc5d`) the reference passed 3 of 5. VF at the moment of arrest (SDDB) is caught 82–89% of the time, against 92–97% for the original databases.
 
@@ -61,6 +63,7 @@ Research questions:
 | `code/evaluate.py` | AHA scoring with patient-bootstrap lower confidence limits; threshold selection on validation patients |
 | `code/run_experiments.py` | Trains, prunes, converts and scores every model on each patient-wise fold |
 | `code/calib_study.py` | Compares 4 int8 calibration rules × 3 seeds and picks one on validation patients |
+| `code/window_study.py` | Clip-length study: repeats training and int8 conversion of the two chip-sized models for clips of 3-10 s, on the same people |
 | `code/summarise.py` | Pools the folds into the result tables and `RESULTS.md` |
 | `code/make_figures.py` | Draws every figure in the report |
 | `code/demo.py` | Runs an int8 model on ECG clips and prints "SHOCK ADVISED" / "NO SHOCK" |
@@ -85,6 +88,10 @@ python code/data.py                       # 2. download CUDB, VFDB, MIT-BIH and 
 python code/run_experiments.py --all      # 3. 5 folds in parallel                         (~1-2 h on 16+ cores)
 python code/calib_study.py --all          # 4. optional: the calibration comparison
 python code/calib_study.py --pick
+python code/window_study.py --build       # 4b. optional: the clip-length study (3-10 s clips)
+python code/window_study.py --all         #     8 lengths x 5 folds x 4 seeds (~2 h on 20+ cores)
+python code/window_study.py --summarise
+python code/window_study.py --figure
 python code/summarise.py                  # 5. tables + results/RESULTS.md
 python code/make_figures.py               # 6. figures
 python code/demo.py                       # 7. demo on held-out patients

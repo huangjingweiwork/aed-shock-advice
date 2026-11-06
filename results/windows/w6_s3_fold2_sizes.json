@@ -1,0 +1,26 @@
+{
+ "small_fp32": {
+  "params": 4625,
+  "macs": 483200,
+  "file_kib": 24.42578125,
+  "peak_ram_kib": 23.25
+ },
+ "small_int8": {
+  "params": 4625,
+  "macs": 483200,
+  "file_kib": 13.1875,
+  "peak_ram_kib": 5.8125
+ },
+ "scratch_k50_fp32": {
+  "params": 126097,
+  "macs": 10966704,
+  "file_kib": 510.7890625,
+  "peak_ram_kib": 70.3125
+ },
+ "scratch_k50_int8": {
+  "params": 126097,
+  "macs": 10966704,
+  "file_kib": 159.5625,
+  "peak_ram_kib": 17.578125
+ }
+}

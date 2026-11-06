@@ -1,0 +1,897 @@
+length_s,model,seed,category,clips,patients,metric,goal,min_lower90,score,lower90,passes
+3,small_fp32,0,coarse VF,2280,66,sensitivity,0.9,0.87,0.9101,0.8754,True
+3,small_fp32,0,rapid VT,662,19,sensitivity,0.75,0.67,0.9532,0.9142,True
+3,small_fp32,0,NSR,6977,72,specificity,0.99,0.97,0.9759,0.9638,False
+3,small_fp32,0,other non-shockable,5091,678,specificity,0.95,0.88,0.9356,0.9133,False
+3,small_fp32,0,asystole,186,28,specificity,0.95,0.92,0.9409,0.8203,False
+3,small_fp32,0,fine VF,9,4,sensitivity,,,0.1111,,
+3,small_fp32,0,other VT,786,107,sensitivity,,,0.7812,,
+3,small_int8,0,coarse VF,2280,66,sensitivity,0.9,0.87,0.9145,0.8803,True
+3,small_int8,0,rapid VT,662,19,sensitivity,0.75,0.67,0.9532,0.9153,True
+3,small_int8,0,NSR,6977,72,specificity,0.99,0.97,0.9752,0.9631,False
+3,small_int8,0,other non-shockable,5091,678,specificity,0.95,0.88,0.934,0.9112,False
+3,small_int8,0,asystole,186,28,specificity,0.95,0.92,0.9355,0.8032,False
+3,small_int8,0,fine VF,9,4,sensitivity,,,0.1111,,
+3,small_int8,0,other VT,786,107,sensitivity,,,0.7837,,
+3,scratch_k50_fp32,0,coarse VF,2280,66,sensitivity,0.9,0.87,0.9461,0.9173,True
+3,scratch_k50_fp32,0,rapid VT,662,19,sensitivity,0.75,0.67,0.9698,0.9472,True
+3,scratch_k50_fp32,0,NSR,6977,72,specificity,0.99,0.97,0.9911,0.9871,True
+3,scratch_k50_fp32,0,other non-shockable,5091,678,specificity,0.95,0.88,0.9485,0.9277,False
+3,scratch_k50_fp32,0,asystole,186,28,specificity,0.95,0.92,0.7849,0.479,False
+3,scratch_k50_fp32,0,fine VF,9,4,sensitivity,,,0.5556,,
+3,scratch_k50_fp32,0,other VT,786,107,sensitivity,,,0.8079,,
+3,scratch_k50_int8,0,coarse VF,2280,66,sensitivity,0.9,0.87,0.9039,0.8663,False
+3,scratch_k50_int8,0,rapid VT,662,19,sensitivity,0.75,0.67,0.929,0.9004,True
+3,scratch_k50_int8,0,NSR,6977,72,specificity,0.99,0.97,0.9917,0.9878,True
+3,scratch_k50_int8,0,other non-shockable,5091,678,specificity,0.95,0.88,0.9346,0.9085,False
+3,scratch_k50_int8,0,asystole,186,28,specificity,0.95,0.92,0.9086,0.7825,False
+3,scratch_k50_int8,0,fine VF,9,4,sensitivity,,,0.1111,,
+3,scratch_k50_int8,0,other VT,786,107,sensitivity,,,0.7939,,
+3,small_fp32,1,coarse VF,2280,66,sensitivity,0.9,0.87,0.925,0.8918,True
+3,small_fp32,1,rapid VT,662,19,sensitivity,0.75,0.67,0.9562,0.914,True
+3,small_fp32,1,NSR,6977,72,specificity,0.99,0.97,0.9696,0.9558,False
+3,small_fp32,1,other non-shockable,5091,678,specificity,0.95,0.88,0.9189,0.8921,False
+3,small_fp32,1,asystole,186,28,specificity,0.95,0.92,0.9247,0.7759,False
+3,small_fp32,1,fine VF,9,4,sensitivity,,,0.1111,,
+3,small_fp32,1,other VT,786,107,sensitivity,,,0.8206,,
+3,small_int8,1,coarse VF,2280,66,sensitivity,0.9,0.87,0.9281,0.8956,True
+3,small_int8,1,rapid VT,662,19,sensitivity,0.75,0.67,0.9547,0.9135,True
+3,small_int8,1,NSR,6977,72,specificity,0.99,0.97,0.9686,0.9548,False
+3,small_int8,1,other non-shockable,5091,678,specificity,0.95,0.88,0.9175,0.89,False
+3,small_int8,1,asystole,186,28,specificity,0.95,0.92,0.9247,0.7759,False
+3,small_int8,1,fine VF,9,4,sensitivity,,,0.1111,,
+3,small_int8,1,other VT,786,107,sensitivity,,,0.8193,,
+3,scratch_k50_fp32,1,coarse VF,2280,66,sensitivity,0.9,0.87,0.9351,0.9056,True
+3,scratch_k50_fp32,1,rapid VT,662,19,sensitivity,0.75,0.67,0.9562,0.9169,True
+3,scratch_k50_fp32,1,NSR,6977,72,specificity,0.99,0.97,0.9781,0.9624,False
+3,scratch_k50_fp32,1,other non-shockable,5091,678,specificity,0.95,0.88,0.9432,0.9157,False
+3,scratch_k50_fp32,1,asystole,186,28,specificity,0.95,0.92,0.9086,0.7419,False
+3,scratch_k50_fp32,1,fine VF,9,4,sensitivity,,,0.4444,,
+3,scratch_k50_fp32,1,other VT,786,107,sensitivity,,,0.8219,,
+3,scratch_k50_int8,1,coarse VF,2280,66,sensitivity,0.9,0.87,0.9399,0.9194,True
+3,scratch_k50_int8,1,rapid VT,662,19,sensitivity,0.75,0.67,0.9562,0.9154,True
+3,scratch_k50_int8,1,NSR,6977,72,specificity,0.99,0.97,0.924,0.8904,False
+3,scratch_k50_int8,1,other non-shockable,5091,678,specificity,0.95,0.88,0.8743,0.8321,False
+3,scratch_k50_int8,1,asystole,186,28,specificity,0.95,0.92,0.2849,0.1783,False
+3,scratch_k50_int8,1,fine VF,9,4,sensitivity,,,0.7778,,
+3,scratch_k50_int8,1,other VT,786,107,sensitivity,,,0.8282,,
+3,small_fp32,2,coarse VF,2280,66,sensitivity,0.9,0.87,0.9031,0.8693,False
+3,small_fp32,2,rapid VT,662,19,sensitivity,0.75,0.67,0.9411,0.9055,True
+3,small_fp32,2,NSR,6977,72,specificity,0.99,0.97,0.9831,0.9743,False
+3,small_fp32,2,other non-shockable,5091,678,specificity,0.95,0.88,0.9293,0.9045,False
+3,small_fp32,2,asystole,186,28,specificity,0.95,0.92,0.9462,0.8679,False
+3,small_fp32,2,fine VF,9,4,sensitivity,,,0.0,,
+3,small_fp32,2,other VT,786,107,sensitivity,,,0.6756,,
+3,small_int8,2,coarse VF,2280,66,sensitivity,0.9,0.87,0.9083,0.8756,True
+3,small_int8,2,rapid VT,662,19,sensitivity,0.75,0.67,0.9441,0.9094,True
+3,small_int8,2,NSR,6977,72,specificity,0.99,0.97,0.9822,0.973,False
+3,small_int8,2,other non-shockable,5091,678,specificity,0.95,0.88,0.9265,0.9007,False
+3,small_int8,2,asystole,186,28,specificity,0.95,0.92,0.9462,0.8679,False
+3,small_int8,2,fine VF,9,4,sensitivity,,,0.0,,
+3,small_int8,2,other VT,786,107,sensitivity,,,0.6959,,
+3,scratch_k50_fp32,2,coarse VF,2280,66,sensitivity,0.9,0.87,0.9294,0.8936,True
+3,scratch_k50_fp32,2,rapid VT,662,19,sensitivity,0.75,0.67,0.9758,0.952,True
+3,scratch_k50_fp32,2,NSR,6977,72,specificity,0.99,0.97,0.9834,0.9755,False
+3,scratch_k50_fp32,2,other non-shockable,5091,678,specificity,0.95,0.88,0.9307,0.9044,False
+3,scratch_k50_fp32,2,asystole,186,28,specificity,0.95,0.92,0.8602,0.6549,False
+3,scratch_k50_fp32,2,fine VF,9,4,sensitivity,,,0.1111,,
+3,scratch_k50_fp32,2,other VT,786,107,sensitivity,,,0.8397,,
+3,scratch_k50_int8,2,coarse VF,2280,66,sensitivity,0.9,0.87,0.864,0.8072,False
+3,scratch_k50_int8,2,rapid VT,662,19,sensitivity,0.75,0.67,0.9637,0.9441,True
+3,scratch_k50_int8,2,NSR,6977,72,specificity,0.99,0.97,0.9857,0.9784,False
+3,scratch_k50_int8,2,other non-shockable,5091,678,specificity,0.95,0.88,0.9187,0.889,False
+3,scratch_k50_int8,2,asystole,186,28,specificity,0.95,0.92,0.9247,0.7874,False
+3,scratch_k50_int8,2,fine VF,9,4,sensitivity,,,0.1111,,
+3,scratch_k50_int8,2,other VT,786,107,sensitivity,,,0.8003,,
+3,small_fp32,3,coarse VF,2280,66,sensitivity,0.9,0.87,0.911,0.8792,True
+3,small_fp32,3,rapid VT,662,19,sensitivity,0.75,0.67,0.9441,0.9025,True
+3,small_fp32,3,NSR,6977,72,specificity,0.99,0.97,0.9755,0.9646,False
+3,small_fp32,3,other non-shockable,5091,678,specificity,0.95,0.88,0.9366,0.914,False
+3,small_fp32,3,asystole,186,28,specificity,0.95,0.92,0.957,0.8876,False
+3,small_fp32,3,fine VF,9,4,sensitivity,,,0.0,,
+3,small_fp32,3,other VT,786,107,sensitivity,,,0.7774,,
+3,small_int8,3,coarse VF,2280,66,sensitivity,0.9,0.87,0.9145,0.8839,True
+3,small_int8,3,rapid VT,662,19,sensitivity,0.75,0.67,0.9486,0.9058,True
+3,small_int8,3,NSR,6977,72,specificity,0.99,0.97,0.9749,0.9642,False
+3,small_int8,3,other non-shockable,5091,678,specificity,0.95,0.88,0.9334,0.9097,False
+3,small_int8,3,asystole,186,28,specificity,0.95,0.92,0.9516,0.8723,False
+3,small_int8,3,fine VF,9,4,sensitivity,,,0.0,,
+3,small_int8,3,other VT,786,107,sensitivity,,,0.7697,,
+3,scratch_k50_fp32,3,coarse VF,2280,66,sensitivity,0.9,0.87,0.9439,0.9135,True
+3,scratch_k50_fp32,3,rapid VT,662,19,sensitivity,0.75,0.67,0.9532,0.9212,True
+3,scratch_k50_fp32,3,NSR,6977,72,specificity,0.99,0.97,0.9908,0.9859,True
+3,scratch_k50_fp32,3,other non-shockable,5091,678,specificity,0.95,0.88,0.9279,0.8968,False
+3,scratch_k50_fp32,3,asystole,186,28,specificity,0.95,0.92,0.9194,0.7795,False
+3,scratch_k50_fp32,3,fine VF,9,4,sensitivity,,,0.1111,,
+3,scratch_k50_fp32,3,other VT,786,107,sensitivity,,,0.8244,,
+3,scratch_k50_int8,3,coarse VF,2280,66,sensitivity,0.9,0.87,0.9057,0.8733,True
+3,scratch_k50_int8,3,rapid VT,662,19,sensitivity,0.75,0.67,0.9456,0.9148,True
+3,scratch_k50_int8,3,NSR,6977,72,specificity,0.99,0.97,0.9905,0.9853,True
+3,scratch_k50_int8,3,other non-shockable,5091,678,specificity,0.95,0.88,0.8894,0.8427,False
+3,scratch_k50_int8,3,asystole,186,28,specificity,0.95,0.92,0.3978,0.1948,False
+3,scratch_k50_int8,3,fine VF,9,4,sensitivity,,,0.1111,,
+3,scratch_k50_int8,3,other VT,786,107,sensitivity,,,0.8041,,
+4,small_fp32,0,coarse VF,1689,66,sensitivity,0.9,0.87,0.9307,0.8984,True
+4,small_fp32,0,rapid VT,490,17,sensitivity,0.75,0.67,0.9571,0.9131,True
+4,small_fp32,0,NSR,5231,72,specificity,0.99,0.97,0.9763,0.9654,False
+4,small_fp32,0,other non-shockable,3922,679,specificity,0.95,0.88,0.9268,0.9033,False
+4,small_fp32,0,asystole,142,28,specificity,0.95,0.92,0.9296,0.7673,False
+4,small_fp32,0,fine VF,5,2,sensitivity,,,0.0,,
+4,small_fp32,0,other VT,609,107,sensitivity,,,0.7652,,
+4,small_int8,0,coarse VF,1689,66,sensitivity,0.9,0.87,0.9295,0.8965,True
+4,small_int8,0,rapid VT,490,17,sensitivity,0.75,0.67,0.9571,0.9139,True
+4,small_int8,0,NSR,5231,72,specificity,0.99,0.97,0.9759,0.9647,False
+4,small_int8,0,other non-shockable,3922,679,specificity,0.95,0.88,0.9245,0.9003,False
+4,small_int8,0,asystole,142,28,specificity,0.95,0.92,0.9296,0.7673,False
+4,small_int8,0,fine VF,5,2,sensitivity,,,0.0,,
+4,small_int8,0,other VT,609,107,sensitivity,,,0.7652,,
+4,scratch_k50_fp32,0,coarse VF,1689,66,sensitivity,0.9,0.87,0.9355,0.8982,True
+4,scratch_k50_fp32,0,rapid VT,490,17,sensitivity,0.75,0.67,0.951,0.9145,True
+4,scratch_k50_fp32,0,NSR,5231,72,specificity,0.99,0.97,0.9828,0.9725,False
+4,scratch_k50_fp32,0,other non-shockable,3922,679,specificity,0.95,0.88,0.9454,0.9215,False
+4,scratch_k50_fp32,0,asystole,142,28,specificity,0.95,0.92,0.7817,0.5385,False
+4,scratch_k50_fp32,0,fine VF,5,2,sensitivity,,,0.8,,
+4,scratch_k50_fp32,0,other VT,609,107,sensitivity,,,0.757,,
+4,scratch_k50_int8,0,coarse VF,1689,66,sensitivity,0.9,0.87,0.852,0.8051,False
+4,scratch_k50_int8,0,rapid VT,490,17,sensitivity,0.75,0.67,0.9163,0.8771,True
+4,scratch_k50_int8,0,NSR,5231,72,specificity,0.99,0.97,0.9847,0.9745,False
+4,scratch_k50_int8,0,other non-shockable,3922,679,specificity,0.95,0.88,0.9539,0.9284,True
+4,scratch_k50_int8,0,asystole,142,28,specificity,0.95,0.92,0.5915,0.4602,False
+4,scratch_k50_int8,0,fine VF,5,2,sensitivity,,,0.0,,
+4,scratch_k50_int8,0,other VT,609,107,sensitivity,,,0.6502,,
+4,small_fp32,1,coarse VF,1689,66,sensitivity,0.9,0.87,0.9142,0.877,True
+4,small_fp32,1,rapid VT,490,17,sensitivity,0.75,0.67,0.949,0.8929,True
+4,small_fp32,1,NSR,5231,72,specificity,0.99,0.97,0.9541,0.9321,False
+4,small_fp32,1,other non-shockable,3922,679,specificity,0.95,0.88,0.8921,0.8586,False
+4,small_fp32,1,asystole,142,28,specificity,0.95,0.92,0.9577,0.8604,False
+4,small_fp32,1,fine VF,5,2,sensitivity,,,0.0,,
+4,small_fp32,1,other VT,609,107,sensitivity,,,0.7734,,
+4,small_int8,1,coarse VF,1689,66,sensitivity,0.9,0.87,0.9153,0.8785,True
+4,small_int8,1,rapid VT,490,17,sensitivity,0.75,0.67,0.949,0.8929,True
+4,small_int8,1,NSR,5231,72,specificity,0.99,0.97,0.952,0.9298,False
+4,small_int8,1,other non-shockable,3922,679,specificity,0.95,0.88,0.8893,0.855,False
+4,small_int8,1,asystole,142,28,specificity,0.95,0.92,0.9507,0.8371,False
+4,small_int8,1,fine VF,5,2,sensitivity,,,0.0,,
+4,small_int8,1,other VT,609,107,sensitivity,,,0.7767,,
+4,scratch_k50_fp32,1,coarse VF,1689,66,sensitivity,0.9,0.87,0.9337,0.9019,True
+4,scratch_k50_fp32,1,rapid VT,490,17,sensitivity,0.75,0.67,0.9449,0.9109,True
+4,scratch_k50_fp32,1,NSR,5231,72,specificity,0.99,0.97,0.9807,0.9704,False
+4,scratch_k50_fp32,1,other non-shockable,3922,679,specificity,0.95,0.88,0.9342,0.9078,False
+4,scratch_k50_fp32,1,asystole,142,28,specificity,0.95,0.92,0.9296,0.7673,False
+4,scratch_k50_fp32,1,fine VF,5,2,sensitivity,,,0.2,,
+4,scratch_k50_fp32,1,other VT,609,107,sensitivity,,,0.7865,,
+4,scratch_k50_int8,1,coarse VF,1689,66,sensitivity,0.9,0.87,0.9479,0.9194,True
+4,scratch_k50_int8,1,rapid VT,490,17,sensitivity,0.75,0.67,0.9571,0.9239,True
+4,scratch_k50_int8,1,NSR,5231,72,specificity,0.99,0.97,0.961,0.94,False
+4,scratch_k50_int8,1,other non-shockable,3922,679,specificity,0.95,0.88,0.8929,0.855,False
+4,scratch_k50_int8,1,asystole,142,28,specificity,0.95,0.92,0.6901,0.3604,False
+4,scratch_k50_int8,1,fine VF,5,2,sensitivity,,,1.0,,
+4,scratch_k50_int8,1,other VT,609,107,sensitivity,,,0.8144,,
+4,small_fp32,2,coarse VF,1689,66,sensitivity,0.9,0.87,0.9171,0.8855,True
+4,small_fp32,2,rapid VT,490,17,sensitivity,0.75,0.67,0.9612,0.9243,True
+4,small_fp32,2,NSR,5231,72,specificity,0.99,0.97,0.9776,0.9683,False
+4,small_fp32,2,other non-shockable,3922,679,specificity,0.95,0.88,0.9148,0.8857,False
+4,small_fp32,2,asystole,142,28,specificity,0.95,0.92,0.9437,0.8241,False
+4,small_fp32,2,fine VF,5,2,sensitivity,,,0.0,,
+4,small_fp32,2,other VT,609,107,sensitivity,,,0.7406,,
+4,small_int8,2,coarse VF,1689,66,sensitivity,0.9,0.87,0.9254,0.8949,True
+4,small_int8,2,rapid VT,490,17,sensitivity,0.75,0.67,0.9612,0.9243,True
+4,small_int8,2,NSR,5231,72,specificity,0.99,0.97,0.9763,0.9665,False
+4,small_int8,2,other non-shockable,3922,679,specificity,0.95,0.88,0.9123,0.8824,False
+4,small_int8,2,asystole,142,28,specificity,0.95,0.92,0.9437,0.8241,False
+4,small_int8,2,fine VF,5,2,sensitivity,,,0.0,,
+4,small_int8,2,other VT,609,107,sensitivity,,,0.7488,,
+4,scratch_k50_fp32,2,coarse VF,1689,66,sensitivity,0.9,0.87,0.9301,0.893,True
+4,scratch_k50_fp32,2,rapid VT,490,17,sensitivity,0.75,0.67,0.9102,0.8535,True
+4,scratch_k50_fp32,2,NSR,5231,72,specificity,0.99,0.97,0.9912,0.9868,True
+4,scratch_k50_fp32,2,other non-shockable,3922,679,specificity,0.95,0.88,0.9656,0.957,True
+4,scratch_k50_fp32,2,asystole,142,28,specificity,0.95,0.92,0.8521,0.6361,False
+4,scratch_k50_fp32,2,fine VF,5,2,sensitivity,,,0.0,,
+4,scratch_k50_fp32,2,other VT,609,107,sensitivity,,,0.7652,,
+4,scratch_k50_int8,2,coarse VF,1689,66,sensitivity,0.9,0.87,0.8609,0.8114,False
+4,scratch_k50_int8,2,rapid VT,490,17,sensitivity,0.75,0.67,0.9,0.8504,True
+4,scratch_k50_int8,2,NSR,5231,72,specificity,0.99,0.97,0.9918,0.9873,True
+4,scratch_k50_int8,2,other non-shockable,3922,679,specificity,0.95,0.88,0.9712,0.964,True
+4,scratch_k50_int8,2,asystole,142,28,specificity,0.95,0.92,0.9718,0.9069,False
+4,scratch_k50_int8,2,fine VF,5,2,sensitivity,,,0.0,,
+4,scratch_k50_int8,2,other VT,609,107,sensitivity,,,0.6995,,
+4,small_fp32,3,coarse VF,1689,66,sensitivity,0.9,0.87,0.8964,0.861,False
+4,small_fp32,3,rapid VT,490,17,sensitivity,0.75,0.67,0.9388,0.8985,True
+4,small_fp32,3,NSR,5231,72,specificity,0.99,0.97,0.9809,0.9721,False
+4,small_fp32,3,other non-shockable,3922,679,specificity,0.95,0.88,0.9258,0.8994,False
+4,small_fp32,3,asystole,142,28,specificity,0.95,0.92,0.9718,0.9069,False
+4,small_fp32,3,fine VF,5,2,sensitivity,,,0.0,,
+4,small_fp32,3,other VT,609,107,sensitivity,,,0.6568,,
+4,small_int8,3,coarse VF,1689,66,sensitivity,0.9,0.87,0.9023,0.8669,False
+4,small_int8,3,rapid VT,490,17,sensitivity,0.75,0.67,0.9449,0.9067,True
+4,small_int8,3,NSR,5231,72,specificity,0.99,0.97,0.9788,0.9694,False
+4,small_int8,3,other non-shockable,3922,679,specificity,0.95,0.88,0.923,0.8957,False
+4,small_int8,3,asystole,142,28,specificity,0.95,0.92,0.9718,0.9069,False
+4,small_int8,3,fine VF,5,2,sensitivity,,,0.0,,
+4,small_int8,3,other VT,609,107,sensitivity,,,0.665,,
+4,scratch_k50_fp32,3,coarse VF,1689,66,sensitivity,0.9,0.87,0.9378,0.9088,True
+4,scratch_k50_fp32,3,rapid VT,490,17,sensitivity,0.75,0.67,0.9143,0.8621,True
+4,scratch_k50_fp32,3,NSR,5231,72,specificity,0.99,0.97,0.9893,0.9829,False
+4,scratch_k50_fp32,3,other non-shockable,3922,679,specificity,0.95,0.88,0.9541,0.939,True
+4,scratch_k50_fp32,3,asystole,142,28,specificity,0.95,0.92,0.8451,0.6152,False
+4,scratch_k50_fp32,3,fine VF,5,2,sensitivity,,,0.0,,
+4,scratch_k50_fp32,3,other VT,609,107,sensitivity,,,0.7619,,
+4,scratch_k50_int8,3,coarse VF,1689,66,sensitivity,0.9,0.87,0.9112,0.8787,True
+4,scratch_k50_int8,3,rapid VT,490,17,sensitivity,0.75,0.67,0.9082,0.8532,True
+4,scratch_k50_int8,3,NSR,5231,72,specificity,0.99,0.97,0.9881,0.9813,False
+4,scratch_k50_int8,3,other non-shockable,3922,679,specificity,0.95,0.88,0.9306,0.9038,False
+4,scratch_k50_int8,3,asystole,142,28,specificity,0.95,0.92,0.8873,0.6847,False
+4,scratch_k50_int8,3,fine VF,5,2,sensitivity,,,0.2,,
+4,scratch_k50_int8,3,other VT,609,107,sensitivity,,,0.7406,,
+5,small_fp32,0,coarse VF,1338,66,sensitivity,0.9,0.87,0.9133,0.8765,True
+5,small_fp32,0,rapid VT,374,16,sensitivity,0.75,0.67,0.9465,0.8946,True
+5,small_fp32,0,NSR,4184,72,specificity,0.99,0.97,0.9766,0.9653,False
+5,small_fp32,0,other non-shockable,3229,677,specificity,0.95,0.88,0.9167,0.8898,False
+5,small_fp32,0,asystole,116,28,specificity,0.95,0.92,0.931,0.7857,False
+5,small_fp32,0,fine VF,4,3,sensitivity,,,0.0,,
+5,small_fp32,0,other VT,504,105,sensitivity,,,0.744,,
+5,small_int8,0,coarse VF,1338,66,sensitivity,0.9,0.87,0.9148,0.8786,True
+5,small_int8,0,rapid VT,374,16,sensitivity,0.75,0.67,0.9465,0.8946,True
+5,small_int8,0,NSR,4184,72,specificity,0.99,0.97,0.9754,0.964,False
+5,small_int8,0,other non-shockable,3229,677,specificity,0.95,0.88,0.913,0.8855,False
+5,small_int8,0,asystole,116,28,specificity,0.95,0.92,0.931,0.7857,False
+5,small_int8,0,fine VF,4,3,sensitivity,,,0.0,,
+5,small_int8,0,other VT,504,105,sensitivity,,,0.7282,,
+5,scratch_k50_fp32,0,coarse VF,1338,66,sensitivity,0.9,0.87,0.8931,0.8564,False
+5,scratch_k50_fp32,0,rapid VT,374,16,sensitivity,0.75,0.67,0.9358,0.8837,True
+5,scratch_k50_fp32,0,NSR,4184,72,specificity,0.99,0.97,0.9878,0.9805,False
+5,scratch_k50_fp32,0,other non-shockable,3229,677,specificity,0.95,0.88,0.9644,0.9549,True
+5,scratch_k50_fp32,0,asystole,116,28,specificity,0.95,0.92,0.8534,0.6232,False
+5,scratch_k50_fp32,0,fine VF,4,3,sensitivity,,,0.0,,
+5,scratch_k50_fp32,0,other VT,504,105,sensitivity,,,0.7361,,
+5,scratch_k50_int8,0,coarse VF,1338,66,sensitivity,0.9,0.87,0.8288,0.7806,False
+5,scratch_k50_int8,0,rapid VT,374,16,sensitivity,0.75,0.67,0.9037,0.8382,True
+5,scratch_k50_int8,0,NSR,4184,72,specificity,0.99,0.97,0.9897,0.9829,False
+5,scratch_k50_int8,0,other non-shockable,3229,677,specificity,0.95,0.88,0.9628,0.9525,True
+5,scratch_k50_int8,0,asystole,116,28,specificity,0.95,0.92,0.3534,0.1656,False
+5,scratch_k50_int8,0,fine VF,4,3,sensitivity,,,0.0,,
+5,scratch_k50_int8,0,other VT,504,105,sensitivity,,,0.6647,,
+5,small_fp32,1,coarse VF,1338,66,sensitivity,0.9,0.87,0.9013,0.8649,False
+5,small_fp32,1,rapid VT,374,16,sensitivity,0.75,0.67,0.9332,0.8864,True
+5,small_fp32,1,NSR,4184,72,specificity,0.99,0.97,0.9725,0.9594,False
+5,small_fp32,1,other non-shockable,3229,677,specificity,0.95,0.88,0.9275,0.9036,False
+5,small_fp32,1,asystole,116,28,specificity,0.95,0.92,0.9828,0.9512,True
+5,small_fp32,1,fine VF,4,3,sensitivity,,,0.0,,
+5,small_fp32,1,other VT,504,105,sensitivity,,,0.7183,,
+5,small_int8,1,coarse VF,1338,66,sensitivity,0.9,0.87,0.9073,0.8737,True
+5,small_int8,1,rapid VT,374,16,sensitivity,0.75,0.67,0.9358,0.8896,True
+5,small_int8,1,NSR,4184,72,specificity,0.99,0.97,0.9713,0.957,False
+5,small_int8,1,other non-shockable,3229,677,specificity,0.95,0.88,0.9241,0.8996,False
+5,small_int8,1,asystole,116,28,specificity,0.95,0.92,0.9828,0.9512,True
+5,small_int8,1,fine VF,4,3,sensitivity,,,0.0,,
+5,small_int8,1,other VT,504,105,sensitivity,,,0.6429,,
+5,scratch_k50_fp32,1,coarse VF,1338,66,sensitivity,0.9,0.87,0.8961,0.8578,False
+5,scratch_k50_fp32,1,rapid VT,374,16,sensitivity,0.75,0.67,0.9706,0.9464,True
+5,scratch_k50_fp32,1,NSR,4184,72,specificity,0.99,0.97,0.9904,0.9852,True
+5,scratch_k50_fp32,1,other non-shockable,3229,677,specificity,0.95,0.88,0.965,0.956,True
+5,scratch_k50_fp32,1,asystole,116,28,specificity,0.95,0.92,0.931,0.8171,False
+5,scratch_k50_fp32,1,fine VF,4,3,sensitivity,,,0.0,,
+5,scratch_k50_fp32,1,other VT,504,105,sensitivity,,,0.7738,,
+5,scratch_k50_int8,1,coarse VF,1338,66,sensitivity,0.9,0.87,0.8543,0.8017,False
+5,scratch_k50_int8,1,rapid VT,374,16,sensitivity,0.75,0.67,0.9519,0.9196,True
+5,scratch_k50_int8,1,NSR,4184,72,specificity,0.99,0.97,0.99,0.985,False
+5,scratch_k50_int8,1,other non-shockable,3229,677,specificity,0.95,0.88,0.9604,0.9509,True
+5,scratch_k50_int8,1,asystole,116,28,specificity,0.95,0.92,0.2845,0.1507,False
+5,scratch_k50_int8,1,fine VF,4,3,sensitivity,,,0.5,,
+5,scratch_k50_int8,1,other VT,504,105,sensitivity,,,0.754,,
+5,small_fp32,2,coarse VF,1338,66,sensitivity,0.9,0.87,0.8901,0.8501,False
+5,small_fp32,2,rapid VT,374,16,sensitivity,0.75,0.67,0.9412,0.897,True
+5,small_fp32,2,NSR,4184,72,specificity,0.99,0.97,0.9751,0.9624,False
+5,small_fp32,2,other non-shockable,3229,677,specificity,0.95,0.88,0.9182,0.8965,False
+5,small_fp32,2,asystole,116,28,specificity,0.95,0.92,0.9483,0.8571,False
+5,small_fp32,2,fine VF,4,3,sensitivity,,,0.0,,
+5,small_fp32,2,other VT,504,105,sensitivity,,,0.6865,,
+5,small_int8,2,coarse VF,1338,66,sensitivity,0.9,0.87,0.8939,0.8553,False
+5,small_int8,2,rapid VT,374,16,sensitivity,0.75,0.67,0.9412,0.897,True
+5,small_int8,2,NSR,4184,72,specificity,0.99,0.97,0.9749,0.962,False
+5,small_int8,2,other non-shockable,3229,677,specificity,0.95,0.88,0.9145,0.8919,False
+5,small_int8,2,asystole,116,28,specificity,0.95,0.92,0.9483,0.8571,False
+5,small_int8,2,fine VF,4,3,sensitivity,,,0.0,,
+5,small_int8,2,other VT,504,105,sensitivity,,,0.7044,,
+5,scratch_k50_fp32,2,coarse VF,1338,66,sensitivity,0.9,0.87,0.9185,0.8807,True
+5,scratch_k50_fp32,2,rapid VT,374,16,sensitivity,0.75,0.67,0.9599,0.916,True
+5,scratch_k50_fp32,2,NSR,4184,72,specificity,0.99,0.97,0.9892,0.9843,False
+5,scratch_k50_fp32,2,other non-shockable,3229,677,specificity,0.95,0.88,0.9439,0.9301,False
+5,scratch_k50_fp32,2,asystole,116,28,specificity,0.95,0.92,0.819,0.5524,False
+5,scratch_k50_fp32,2,fine VF,4,3,sensitivity,,,0.0,,
+5,scratch_k50_fp32,2,other VT,504,105,sensitivity,,,0.7698,,
+5,scratch_k50_int8,2,coarse VF,1338,66,sensitivity,0.9,0.87,0.8453,0.7994,False
+5,scratch_k50_int8,2,rapid VT,374,16,sensitivity,0.75,0.67,0.9706,0.943,True
+5,scratch_k50_int8,2,NSR,4184,72,specificity,0.99,0.97,0.9641,0.9447,False
+5,scratch_k50_int8,2,other non-shockable,3229,677,specificity,0.95,0.88,0.9161,0.8857,False
+5,scratch_k50_int8,2,asystole,116,28,specificity,0.95,0.92,0.9828,0.9512,True
+5,scratch_k50_int8,2,fine VF,4,3,sensitivity,,,0.25,,
+5,scratch_k50_int8,2,other VT,504,105,sensitivity,,,0.7381,,
+5,small_fp32,3,coarse VF,1338,66,sensitivity,0.9,0.87,0.8744,0.8327,False
+5,small_fp32,3,rapid VT,374,16,sensitivity,0.75,0.67,0.9358,0.8864,True
+5,small_fp32,3,NSR,4184,72,specificity,0.99,0.97,0.973,0.9599,False
+5,small_fp32,3,other non-shockable,3229,677,specificity,0.95,0.88,0.9294,0.9088,False
+5,small_fp32,3,asystole,116,28,specificity,0.95,0.92,0.9914,0.973,True
+5,small_fp32,3,fine VF,4,3,sensitivity,,,0.0,,
+5,small_fp32,3,other VT,504,105,sensitivity,,,0.6865,,
+5,small_int8,3,coarse VF,1338,66,sensitivity,0.9,0.87,0.8797,0.8387,False
+5,small_int8,3,rapid VT,374,16,sensitivity,0.75,0.67,0.9358,0.8864,True
+5,small_int8,3,NSR,4184,72,specificity,0.99,0.97,0.9706,0.9563,False
+5,small_int8,3,other non-shockable,3229,677,specificity,0.95,0.88,0.926,0.9051,False
+5,small_int8,3,asystole,116,28,specificity,0.95,0.92,0.9914,0.973,True
+5,small_int8,3,fine VF,4,3,sensitivity,,,0.0,,
+5,small_int8,3,other VT,504,105,sensitivity,,,0.5714,,
+5,scratch_k50_fp32,3,coarse VF,1338,66,sensitivity,0.9,0.87,0.9499,0.9206,True
+5,scratch_k50_fp32,3,rapid VT,374,16,sensitivity,0.75,0.67,0.9706,0.941,True
+5,scratch_k50_fp32,3,NSR,4184,72,specificity,0.99,0.97,0.9768,0.9624,False
+5,scratch_k50_fp32,3,other non-shockable,3229,677,specificity,0.95,0.88,0.9319,0.9052,False
+5,scratch_k50_fp32,3,asystole,116,28,specificity,0.95,0.92,0.819,0.5483,False
+5,scratch_k50_fp32,3,fine VF,4,3,sensitivity,,,0.75,,
+5,scratch_k50_fp32,3,other VT,504,105,sensitivity,,,0.7956,,
+5,scratch_k50_int8,3,coarse VF,1338,66,sensitivity,0.9,0.87,0.9058,0.8682,False
+5,scratch_k50_int8,3,rapid VT,374,16,sensitivity,0.75,0.67,0.9652,0.9355,True
+5,scratch_k50_int8,3,NSR,4184,72,specificity,0.99,0.97,0.962,0.9399,False
+5,scratch_k50_int8,3,other non-shockable,3229,677,specificity,0.95,0.88,0.917,0.8847,False
+5,scratch_k50_int8,3,asystole,116,28,specificity,0.95,0.92,0.6121,0.5172,False
+5,scratch_k50_int8,3,fine VF,4,3,sensitivity,,,0.25,,
+5,scratch_k50_int8,3,other VT,504,105,sensitivity,,,0.7857,,
+6,small_fp32,0,coarse VF,1098,66,sensitivity,0.9,0.87,0.8944,0.8493,False
+6,small_fp32,0,rapid VT,315,15,sensitivity,0.75,0.67,0.946,0.8773,True
+6,small_fp32,0,NSR,3484,72,specificity,0.99,0.97,0.9745,0.9612,False
+6,small_fp32,0,other non-shockable,2775,674,specificity,0.95,0.88,0.9081,0.8768,False
+6,small_fp32,0,asystole,99,28,specificity,0.95,0.92,0.9697,0.9116,False
+6,small_fp32,0,fine VF,3,2,sensitivity,,,0.0,,
+6,small_fp32,0,other VT,428,105,sensitivity,,,0.7196,,
+6,small_int8,0,coarse VF,1098,66,sensitivity,0.9,0.87,0.898,0.8549,False
+6,small_int8,0,rapid VT,315,15,sensitivity,0.75,0.67,0.946,0.8773,True
+6,small_int8,0,NSR,3484,72,specificity,0.99,0.97,0.9733,0.9601,False
+6,small_int8,0,other non-shockable,2775,674,specificity,0.95,0.88,0.9067,0.8753,False
+6,small_int8,0,asystole,99,28,specificity,0.95,0.92,0.9596,0.8821,False
+6,small_int8,0,fine VF,3,2,sensitivity,,,0.0,,
+6,small_int8,0,other VT,428,105,sensitivity,,,0.7173,,
+6,scratch_k50_fp32,0,coarse VF,1098,66,sensitivity,0.9,0.87,0.929,0.8913,True
+6,scratch_k50_fp32,0,rapid VT,315,15,sensitivity,0.75,0.67,0.9746,0.9619,True
+6,scratch_k50_fp32,0,NSR,3484,72,specificity,0.99,0.97,0.9845,0.9714,False
+6,scratch_k50_fp32,0,other non-shockable,2775,674,specificity,0.95,0.88,0.9247,0.8912,False
+6,scratch_k50_fp32,0,asystole,99,28,specificity,0.95,0.92,0.9293,0.7937,False
+6,scratch_k50_fp32,0,fine VF,3,2,sensitivity,,,0.3333,,
+6,scratch_k50_fp32,0,other VT,428,105,sensitivity,,,0.7266,,
+6,scratch_k50_int8,0,coarse VF,1098,66,sensitivity,0.9,0.87,0.8852,0.8408,False
+6,scratch_k50_int8,0,rapid VT,315,15,sensitivity,0.75,0.67,0.9714,0.954,True
+6,scratch_k50_int8,0,NSR,3484,72,specificity,0.99,0.97,0.9856,0.9723,False
+6,scratch_k50_int8,0,other non-shockable,2775,674,specificity,0.95,0.88,0.893,0.8498,False
+6,scratch_k50_int8,0,asystole,99,28,specificity,0.95,0.92,0.9192,0.7951,False
+6,scratch_k50_int8,0,fine VF,3,2,sensitivity,,,0.0,,
+6,scratch_k50_int8,0,other VT,428,105,sensitivity,,,0.75,,
+6,small_fp32,1,coarse VF,1098,66,sensitivity,0.9,0.87,0.9107,0.8769,True
+6,small_fp32,1,rapid VT,315,15,sensitivity,0.75,0.67,0.9429,0.8794,True
+6,small_fp32,1,NSR,3484,72,specificity,0.99,0.97,0.9796,0.9696,False
+6,small_fp32,1,other non-shockable,2775,674,specificity,0.95,0.88,0.9236,0.8965,False
+6,small_fp32,1,asystole,99,28,specificity,0.95,0.92,0.9596,0.8821,False
+6,small_fp32,1,fine VF,3,2,sensitivity,,,0.0,,
+6,small_fp32,1,other VT,428,105,sensitivity,,,0.6869,,
+6,small_int8,1,coarse VF,1098,66,sensitivity,0.9,0.87,0.9171,0.883,True
+6,small_int8,1,rapid VT,315,15,sensitivity,0.75,0.67,0.946,0.8872,True
+6,small_int8,1,NSR,3484,72,specificity,0.99,0.97,0.9785,0.9677,False
+6,small_int8,1,other non-shockable,2775,674,specificity,0.95,0.88,0.9229,0.8951,False
+6,small_int8,1,asystole,99,28,specificity,0.95,0.92,0.9495,0.8526,False
+6,small_int8,1,fine VF,3,2,sensitivity,,,0.0,,
+6,small_int8,1,other VT,428,105,sensitivity,,,0.5771,,
+6,scratch_k50_fp32,1,coarse VF,1098,66,sensitivity,0.9,0.87,0.9308,0.8995,True
+6,scratch_k50_fp32,1,rapid VT,315,15,sensitivity,0.75,0.67,0.9143,0.8618,True
+6,scratch_k50_fp32,1,NSR,3484,72,specificity,0.99,0.97,0.9931,0.9894,True
+6,scratch_k50_fp32,1,other non-shockable,2775,674,specificity,0.95,0.88,0.9622,0.9509,True
+6,scratch_k50_fp32,1,asystole,99,28,specificity,0.95,0.92,0.9293,0.8,False
+6,scratch_k50_fp32,1,fine VF,3,2,sensitivity,,,0.0,,
+6,scratch_k50_fp32,1,other VT,428,105,sensitivity,,,0.6893,,
+6,scratch_k50_int8,1,coarse VF,1098,66,sensitivity,0.9,0.87,0.8944,0.8505,False
+6,scratch_k50_int8,1,rapid VT,315,15,sensitivity,0.75,0.67,0.9016,0.8408,True
+6,scratch_k50_int8,1,NSR,3484,72,specificity,0.99,0.97,0.9902,0.9862,True
+6,scratch_k50_int8,1,other non-shockable,2775,674,specificity,0.95,0.88,0.9499,0.9352,False
+6,scratch_k50_int8,1,asystole,99,28,specificity,0.95,0.92,0.7374,0.3887,False
+6,scratch_k50_int8,1,fine VF,3,2,sensitivity,,,0.6667,,
+6,scratch_k50_int8,1,other VT,428,105,sensitivity,,,0.6612,,
+6,small_fp32,2,coarse VF,1098,66,sensitivity,0.9,0.87,0.8862,0.8429,False
+6,small_fp32,2,rapid VT,315,15,sensitivity,0.75,0.67,0.9651,0.9315,True
+6,small_fp32,2,NSR,3484,72,specificity,0.99,0.97,0.9828,0.9729,False
+6,small_fp32,2,other non-shockable,2775,674,specificity,0.95,0.88,0.9232,0.9023,False
+6,small_fp32,2,asystole,99,28,specificity,0.95,0.92,0.9596,0.8821,False
+6,small_fp32,2,fine VF,3,2,sensitivity,,,0.0,,
+6,small_fp32,2,other VT,428,105,sensitivity,,,0.6612,,
+6,small_int8,2,coarse VF,1098,66,sensitivity,0.9,0.87,0.888,0.8454,False
+6,small_int8,2,rapid VT,315,15,sensitivity,0.75,0.67,0.9651,0.9315,True
+6,small_int8,2,NSR,3484,72,specificity,0.99,0.97,0.9819,0.9717,False
+6,small_int8,2,other non-shockable,2775,674,specificity,0.95,0.88,0.9196,0.8981,False
+6,small_int8,2,asystole,99,28,specificity,0.95,0.92,0.9596,0.8821,False
+6,small_int8,2,fine VF,3,2,sensitivity,,,0.0,,
+6,small_int8,2,other VT,428,105,sensitivity,,,0.6682,,
+6,scratch_k50_fp32,2,coarse VF,1098,66,sensitivity,0.9,0.87,0.9035,0.861,False
+6,scratch_k50_fp32,2,rapid VT,315,15,sensitivity,0.75,0.67,0.946,0.9046,True
+6,scratch_k50_fp32,2,NSR,3484,72,specificity,0.99,0.97,0.9868,0.979,False
+6,scratch_k50_fp32,2,other non-shockable,2775,674,specificity,0.95,0.88,0.9528,0.9353,True
+6,scratch_k50_fp32,2,asystole,99,28,specificity,0.95,0.92,0.8081,0.5273,False
+6,scratch_k50_fp32,2,fine VF,3,2,sensitivity,,,0.6667,,
+6,scratch_k50_fp32,2,other VT,428,105,sensitivity,,,0.729,,
+6,scratch_k50_int8,2,coarse VF,1098,66,sensitivity,0.9,0.87,0.7878,0.7307,False
+6,scratch_k50_int8,2,rapid VT,315,15,sensitivity,0.75,0.67,0.8635,0.7932,True
+6,scratch_k50_int8,2,NSR,3484,72,specificity,0.99,0.97,0.9894,0.9824,False
+6,scratch_k50_int8,2,other non-shockable,2775,674,specificity,0.95,0.88,0.9528,0.9308,True
+6,scratch_k50_int8,2,asystole,99,28,specificity,0.95,0.92,0.9596,0.8821,False
+6,scratch_k50_int8,2,fine VF,3,2,sensitivity,,,0.0,,
+6,scratch_k50_int8,2,other VT,428,105,sensitivity,,,0.5911,,
+6,small_fp32,3,coarse VF,1098,66,sensitivity,0.9,0.87,0.9208,0.8905,True
+6,small_fp32,3,rapid VT,315,15,sensitivity,0.75,0.67,0.9556,0.9126,True
+6,small_fp32,3,NSR,3484,72,specificity,0.99,0.97,0.9722,0.9576,False
+6,small_fp32,3,other non-shockable,2775,674,specificity,0.95,0.88,0.9182,0.8927,False
+6,small_fp32,3,asystole,99,28,specificity,0.95,0.92,0.9293,0.8254,False
+6,small_fp32,3,fine VF,3,2,sensitivity,,,0.0,,
+6,small_fp32,3,other VT,428,105,sensitivity,,,0.6869,,
+6,small_int8,3,coarse VF,1098,66,sensitivity,0.9,0.87,0.9244,0.8948,True
+6,small_int8,3,rapid VT,315,15,sensitivity,0.75,0.67,0.9587,0.9167,True
+6,small_int8,3,NSR,3484,72,specificity,0.99,0.97,0.9716,0.9568,False
+6,small_int8,3,other non-shockable,2775,674,specificity,0.95,0.88,0.9142,0.8876,False
+6,small_int8,3,asystole,99,28,specificity,0.95,0.92,0.9293,0.8212,False
+6,small_int8,3,fine VF,3,2,sensitivity,,,0.0,,
+6,small_int8,3,other VT,428,105,sensitivity,,,0.6893,,
+6,scratch_k50_fp32,3,coarse VF,1098,66,sensitivity,0.9,0.87,0.9353,0.9012,True
+6,scratch_k50_fp32,3,rapid VT,315,15,sensitivity,0.75,0.67,0.9683,0.9495,True
+6,scratch_k50_fp32,3,NSR,3484,72,specificity,0.99,0.97,0.9865,0.98,False
+6,scratch_k50_fp32,3,other non-shockable,2775,674,specificity,0.95,0.88,0.9377,0.9159,False
+6,scratch_k50_fp32,3,asystole,99,28,specificity,0.95,0.92,0.8384,0.6032,False
+6,scratch_k50_fp32,3,fine VF,3,2,sensitivity,,,0.6667,,
+6,scratch_k50_fp32,3,other VT,428,105,sensitivity,,,0.7453,,
+6,scratch_k50_int8,3,coarse VF,1098,66,sensitivity,0.9,0.87,0.8843,0.844,False
+6,scratch_k50_int8,3,rapid VT,315,15,sensitivity,0.75,0.67,0.9206,0.8559,True
+6,scratch_k50_int8,3,NSR,3484,72,specificity,0.99,0.97,0.9716,0.9531,False
+6,scratch_k50_int8,3,other non-shockable,2775,674,specificity,0.95,0.88,0.9362,0.9115,False
+6,scratch_k50_int8,3,asystole,99,28,specificity,0.95,0.92,0.9394,0.8245,False
+6,scratch_k50_int8,3,fine VF,3,2,sensitivity,,,0.3333,,
+6,scratch_k50_int8,3,other VT,428,105,sensitivity,,,0.6799,,
+7,small_fp32,0,coarse VF,929,66,sensitivity,0.9,0.87,0.9085,0.8703,True
+7,small_fp32,0,rapid VT,265,15,sensitivity,0.75,0.67,0.9736,0.9476,True
+7,small_fp32,0,NSR,2928,72,specificity,0.99,0.97,0.9781,0.9669,False
+7,small_fp32,0,other non-shockable,2410,672,specificity,0.95,0.88,0.9212,0.8951,False
+7,small_fp32,0,asystole,87,26,specificity,0.95,0.92,0.954,0.8621,False
+7,small_fp32,0,fine VF,3,2,sensitivity,,,0.0,,
+7,small_fp32,0,other VT,374,105,sensitivity,,,0.6711,,
+7,small_int8,0,coarse VF,929,66,sensitivity,0.9,0.87,0.9128,0.8743,True
+7,small_int8,0,rapid VT,265,15,sensitivity,0.75,0.67,0.9736,0.9476,True
+7,small_int8,0,NSR,2928,72,specificity,0.99,0.97,0.9768,0.9652,False
+7,small_int8,0,other non-shockable,2410,672,specificity,0.95,0.88,0.917,0.8899,False
+7,small_int8,0,asystole,87,26,specificity,0.95,0.92,0.954,0.8621,False
+7,small_int8,0,fine VF,3,2,sensitivity,,,0.0,,
+7,small_int8,0,other VT,374,105,sensitivity,,,0.6711,,
+7,scratch_k50_fp32,0,coarse VF,929,66,sensitivity,0.9,0.87,0.9193,0.8791,True
+7,scratch_k50_fp32,0,rapid VT,265,15,sensitivity,0.75,0.67,0.9057,0.8103,True
+7,scratch_k50_fp32,0,NSR,2928,72,specificity,0.99,0.97,0.9676,0.947,False
+7,scratch_k50_fp32,0,other non-shockable,2410,672,specificity,0.95,0.88,0.9286,0.8995,False
+7,scratch_k50_fp32,0,asystole,87,26,specificity,0.95,0.92,0.8046,0.5453,False
+7,scratch_k50_fp32,0,fine VF,3,2,sensitivity,,,0.6667,,
+7,scratch_k50_fp32,0,other VT,374,105,sensitivity,,,0.7032,,
+7,scratch_k50_int8,0,coarse VF,929,66,sensitivity,0.9,0.87,0.8515,0.8067,False
+7,scratch_k50_int8,0,rapid VT,265,15,sensitivity,0.75,0.67,0.883,0.7739,True
+7,scratch_k50_int8,0,NSR,2928,72,specificity,0.99,0.97,0.9911,0.9855,True
+7,scratch_k50_int8,0,other non-shockable,2410,672,specificity,0.95,0.88,0.9419,0.9158,False
+7,scratch_k50_int8,0,asystole,87,26,specificity,0.95,0.92,0.3793,0.2031,False
+7,scratch_k50_int8,0,fine VF,3,2,sensitivity,,,0.0,,
+7,scratch_k50_int8,0,other VT,374,105,sensitivity,,,0.6765,,
+7,small_fp32,1,coarse VF,929,66,sensitivity,0.9,0.87,0.8579,0.8116,False
+7,small_fp32,1,rapid VT,265,15,sensitivity,0.75,0.67,0.9245,0.8706,True
+7,small_fp32,1,NSR,2928,72,specificity,0.99,0.97,0.9706,0.9565,False
+7,small_fp32,1,other non-shockable,2410,672,specificity,0.95,0.88,0.9357,0.916,False
+7,small_fp32,1,asystole,87,26,specificity,0.95,0.92,1.0,1.0,True
+7,small_fp32,1,fine VF,3,2,sensitivity,,,0.0,,
+7,small_fp32,1,other VT,374,105,sensitivity,,,0.6283,,
+7,small_int8,1,coarse VF,929,66,sensitivity,0.9,0.87,0.8654,0.8197,False
+7,small_int8,1,rapid VT,265,15,sensitivity,0.75,0.67,0.9321,0.882,True
+7,small_int8,1,NSR,2928,72,specificity,0.99,0.97,0.9693,0.9545,False
+7,small_int8,1,other non-shockable,2410,672,specificity,0.95,0.88,0.9324,0.9124,False
+7,small_int8,1,asystole,87,26,specificity,0.95,0.92,1.0,1.0,True
+7,small_int8,1,fine VF,3,2,sensitivity,,,0.0,,
+7,small_int8,1,other VT,374,105,sensitivity,,,0.6364,,
+7,scratch_k50_fp32,1,coarse VF,929,66,sensitivity,0.9,0.87,0.9311,0.8987,True
+7,scratch_k50_fp32,1,rapid VT,265,15,sensitivity,0.75,0.67,0.8868,0.7783,True
+7,scratch_k50_fp32,1,NSR,2928,72,specificity,0.99,0.97,0.9928,0.9892,True
+7,scratch_k50_fp32,1,other non-shockable,2410,672,specificity,0.95,0.88,0.9573,0.9442,True
+7,scratch_k50_fp32,1,asystole,87,26,specificity,0.95,0.92,0.8391,0.6122,False
+7,scratch_k50_fp32,1,fine VF,3,2,sensitivity,,,0.3333,,
+7,scratch_k50_fp32,1,other VT,374,105,sensitivity,,,0.6738,,
+7,scratch_k50_int8,1,coarse VF,929,66,sensitivity,0.9,0.87,0.8956,0.8618,False
+7,scratch_k50_int8,1,rapid VT,265,15,sensitivity,0.75,0.67,0.8981,0.7982,True
+7,scratch_k50_int8,1,NSR,2928,72,specificity,0.99,0.97,0.9754,0.9595,False
+7,scratch_k50_int8,1,other non-shockable,2410,672,specificity,0.95,0.88,0.9091,0.8813,False
+7,scratch_k50_int8,1,asystole,87,26,specificity,0.95,0.92,0.1954,0.096,False
+7,scratch_k50_int8,1,fine VF,3,2,sensitivity,,,0.6667,,
+7,scratch_k50_int8,1,other VT,374,105,sensitivity,,,0.6524,,
+7,small_fp32,2,coarse VF,929,66,sensitivity,0.9,0.87,0.8924,0.8546,False
+7,small_fp32,2,rapid VT,265,15,sensitivity,0.75,0.67,0.966,0.9347,True
+7,small_fp32,2,NSR,2928,72,specificity,0.99,0.97,0.9792,0.9685,False
+7,small_fp32,2,other non-shockable,2410,672,specificity,0.95,0.88,0.9332,0.916,False
+7,small_fp32,2,asystole,87,26,specificity,0.95,0.92,0.9885,0.9655,True
+7,small_fp32,2,fine VF,3,2,sensitivity,,,0.0,,
+7,small_fp32,2,other VT,374,105,sensitivity,,,0.6417,,
+7,small_int8,2,coarse VF,929,66,sensitivity,0.9,0.87,0.902,0.8651,False
+7,small_int8,2,rapid VT,265,15,sensitivity,0.75,0.67,0.966,0.9347,True
+7,small_int8,2,NSR,2928,72,specificity,0.99,0.97,0.9771,0.9657,False
+7,small_int8,2,other non-shockable,2410,672,specificity,0.95,0.88,0.9282,0.9093,False
+7,small_int8,2,asystole,87,26,specificity,0.95,0.92,0.9885,0.9655,True
+7,small_int8,2,fine VF,3,2,sensitivity,,,0.0,,
+7,small_int8,2,other VT,374,105,sensitivity,,,0.6578,,
+7,scratch_k50_fp32,2,coarse VF,929,66,sensitivity,0.9,0.87,0.9193,0.8795,True
+7,scratch_k50_fp32,2,rapid VT,265,15,sensitivity,0.75,0.67,0.9698,0.9387,True
+7,scratch_k50_fp32,2,NSR,2928,72,specificity,0.99,0.97,0.9908,0.9849,True
+7,scratch_k50_fp32,2,other non-shockable,2410,672,specificity,0.95,0.88,0.9581,0.9446,True
+7,scratch_k50_fp32,2,asystole,87,26,specificity,0.95,0.92,0.8851,0.7317,False
+7,scratch_k50_fp32,2,fine VF,3,2,sensitivity,,,0.3333,,
+7,scratch_k50_fp32,2,other VT,374,105,sensitivity,,,0.5936,,
+7,scratch_k50_int8,2,coarse VF,929,66,sensitivity,0.9,0.87,0.7955,0.7301,False
+7,scratch_k50_int8,2,rapid VT,265,15,sensitivity,0.75,0.67,0.9094,0.868,True
+7,scratch_k50_int8,2,NSR,2928,72,specificity,0.99,0.97,0.9908,0.9845,True
+7,scratch_k50_int8,2,other non-shockable,2410,672,specificity,0.95,0.88,0.9672,0.9552,True
+7,scratch_k50_int8,2,asystole,87,26,specificity,0.95,0.92,1.0,1.0,True
+7,scratch_k50_int8,2,fine VF,3,2,sensitivity,,,0.3333,,
+7,scratch_k50_int8,2,other VT,374,105,sensitivity,,,0.4465,,
+7,small_fp32,3,coarse VF,929,66,sensitivity,0.9,0.87,0.8934,0.8568,False
+7,small_fp32,3,rapid VT,265,15,sensitivity,0.75,0.67,0.9509,0.9153,True
+7,small_fp32,3,NSR,2928,72,specificity,0.99,0.97,0.9747,0.9618,False
+7,small_fp32,3,other non-shockable,2410,672,specificity,0.95,0.88,0.929,0.9072,False
+7,small_fp32,3,asystole,87,26,specificity,0.95,0.92,0.9885,0.9655,True
+7,small_fp32,3,fine VF,3,2,sensitivity,,,0.0,,
+7,small_fp32,3,other VT,374,105,sensitivity,,,0.6203,,
+7,small_int8,3,coarse VF,929,66,sensitivity,0.9,0.87,0.8977,0.8604,False
+7,small_int8,3,rapid VT,265,15,sensitivity,0.75,0.67,0.9547,0.9227,True
+7,small_int8,3,NSR,2928,72,specificity,0.99,0.97,0.9747,0.9618,False
+7,small_int8,3,other non-shockable,2410,672,specificity,0.95,0.88,0.9232,0.8995,False
+7,small_int8,3,asystole,87,26,specificity,0.95,0.92,0.9655,0.9062,False
+7,small_int8,3,fine VF,3,2,sensitivity,,,0.0,,
+7,small_int8,3,other VT,374,105,sensitivity,,,0.6283,,
+7,scratch_k50_fp32,3,coarse VF,929,66,sensitivity,0.9,0.87,0.9311,0.8967,True
+7,scratch_k50_fp32,3,rapid VT,265,15,sensitivity,0.75,0.67,0.966,0.9416,True
+7,scratch_k50_fp32,3,NSR,2928,72,specificity,0.99,0.97,0.9877,0.9805,False
+7,scratch_k50_fp32,3,other non-shockable,2410,672,specificity,0.95,0.88,0.9448,0.9234,False
+7,scratch_k50_fp32,3,asystole,87,26,specificity,0.95,0.92,0.8161,0.5833,False
+7,scratch_k50_fp32,3,fine VF,3,2,sensitivity,,,0.6667,,
+7,scratch_k50_fp32,3,other VT,374,105,sensitivity,,,0.639,,
+7,scratch_k50_int8,3,coarse VF,929,66,sensitivity,0.9,0.87,0.8859,0.8462,False
+7,scratch_k50_int8,3,rapid VT,265,15,sensitivity,0.75,0.67,0.9396,0.913,True
+7,scratch_k50_int8,3,NSR,2928,72,specificity,0.99,0.97,0.9887,0.9829,False
+7,scratch_k50_int8,3,other non-shockable,2410,672,specificity,0.95,0.88,0.9394,0.914,False
+7,scratch_k50_int8,3,asystole,87,26,specificity,0.95,0.92,0.931,0.8301,False
+7,scratch_k50_int8,3,fine VF,3,2,sensitivity,,,0.3333,,
+7,scratch_k50_int8,3,other VT,374,105,sensitivity,,,0.6604,,
+8,small_fp32,0,coarse VF,806,65,sensitivity,0.9,0.87,0.9218,0.8902,True
+8,small_fp32,0,rapid VT,226,14,sensitivity,0.75,0.67,0.9646,0.9449,True
+8,small_fp32,0,NSR,2578,72,specificity,0.99,0.97,0.9775,0.9643,False
+8,small_fp32,0,other non-shockable,2189,671,specificity,0.95,0.88,0.9041,0.8763,False
+8,small_fp32,0,asystole,77,26,specificity,0.95,0.92,0.974,0.9149,False
+8,small_fp32,0,fine VF,3,2,sensitivity,,,0.0,,
+8,small_fp32,0,other VT,339,105,sensitivity,,,0.6372,,
+8,small_int8,0,coarse VF,806,65,sensitivity,0.9,0.87,0.9256,0.893,True
+8,small_int8,0,rapid VT,226,14,sensitivity,0.75,0.67,0.9735,0.9609,True
+8,small_int8,0,NSR,2578,72,specificity,0.99,0.97,0.9767,0.9636,False
+8,small_int8,0,other non-shockable,2189,671,specificity,0.95,0.88,0.8958,0.8659,False
+8,small_int8,0,asystole,77,26,specificity,0.95,0.92,0.961,0.8723,False
+8,small_int8,0,fine VF,3,2,sensitivity,,,0.0,,
+8,small_int8,0,other VT,339,105,sensitivity,,,0.646,,
+8,scratch_k50_fp32,0,coarse VF,806,65,sensitivity,0.9,0.87,0.9169,0.8795,True
+8,scratch_k50_fp32,0,rapid VT,226,14,sensitivity,0.75,0.67,0.9602,0.9202,True
+8,scratch_k50_fp32,0,NSR,2578,72,specificity,0.99,0.97,0.9938,0.9898,True
+8,scratch_k50_fp32,0,other non-shockable,2189,671,specificity,0.95,0.88,0.9561,0.9439,True
+8,scratch_k50_fp32,0,asystole,77,26,specificity,0.95,0.92,0.8831,0.7111,False
+8,scratch_k50_fp32,0,fine VF,3,2,sensitivity,,,0.6667,,
+8,scratch_k50_fp32,0,other VT,339,105,sensitivity,,,0.6519,,
+8,scratch_k50_int8,0,coarse VF,806,65,sensitivity,0.9,0.87,0.8164,0.7548,False
+8,scratch_k50_int8,0,rapid VT,226,14,sensitivity,0.75,0.67,0.9469,0.9024,True
+8,scratch_k50_int8,0,NSR,2578,72,specificity,0.99,0.97,0.9946,0.9911,True
+8,scratch_k50_int8,0,other non-shockable,2189,671,specificity,0.95,0.88,0.9543,0.9383,True
+8,scratch_k50_int8,0,asystole,77,26,specificity,0.95,0.92,0.987,0.9583,True
+8,scratch_k50_int8,0,fine VF,3,2,sensitivity,,,0.0,,
+8,scratch_k50_int8,0,other VT,339,105,sensitivity,,,0.6401,,
+8,small_fp32,1,coarse VF,806,65,sensitivity,0.9,0.87,0.9119,0.8774,True
+8,small_fp32,1,rapid VT,226,14,sensitivity,0.75,0.67,0.9381,0.8879,True
+8,small_fp32,1,NSR,2578,72,specificity,0.99,0.97,0.9616,0.9385,False
+8,small_fp32,1,other non-shockable,2189,671,specificity,0.95,0.88,0.9095,0.8826,False
+8,small_fp32,1,asystole,77,26,specificity,0.95,0.92,0.987,0.9574,True
+8,small_fp32,1,fine VF,3,2,sensitivity,,,0.0,,
+8,small_fp32,1,other VT,339,105,sensitivity,,,0.649,,
+8,small_int8,1,coarse VF,806,65,sensitivity,0.9,0.87,0.9156,0.8813,True
+8,small_int8,1,rapid VT,226,14,sensitivity,0.75,0.67,0.9425,0.8991,True
+8,small_int8,1,NSR,2578,72,specificity,0.99,0.97,0.9604,0.9369,False
+8,small_int8,1,other non-shockable,2189,671,specificity,0.95,0.88,0.9059,0.8774,False
+8,small_int8,1,asystole,77,26,specificity,0.95,0.92,0.974,0.9149,False
+8,small_int8,1,fine VF,3,2,sensitivity,,,0.0,,
+8,small_int8,1,other VT,339,105,sensitivity,,,0.6519,,
+8,scratch_k50_fp32,1,coarse VF,806,65,sensitivity,0.9,0.87,0.9355,0.9053,True
+8,scratch_k50_fp32,1,rapid VT,226,14,sensitivity,0.75,0.67,0.9558,0.9209,True
+8,scratch_k50_fp32,1,NSR,2578,72,specificity,0.99,0.97,0.9938,0.9888,True
+8,scratch_k50_fp32,1,other non-shockable,2189,671,specificity,0.95,0.88,0.9653,0.9578,True
+8,scratch_k50_fp32,1,asystole,77,26,specificity,0.95,0.92,0.8571,0.6522,False
+8,scratch_k50_fp32,1,fine VF,3,2,sensitivity,,,0.6667,,
+8,scratch_k50_fp32,1,other VT,339,105,sensitivity,,,0.6549,,
+8,scratch_k50_int8,1,coarse VF,806,65,sensitivity,0.9,0.87,0.9231,0.8917,True
+8,scratch_k50_int8,1,rapid VT,226,14,sensitivity,0.75,0.67,0.969,0.9326,True
+8,scratch_k50_int8,1,NSR,2578,72,specificity,0.99,0.97,0.9919,0.9863,True
+8,scratch_k50_int8,1,other non-shockable,2189,671,specificity,0.95,0.88,0.9319,0.9089,False
+8,scratch_k50_int8,1,asystole,77,26,specificity,0.95,0.92,0.2987,0.1589,False
+8,scratch_k50_int8,1,fine VF,3,2,sensitivity,,,0.6667,,
+8,scratch_k50_int8,1,other VT,339,105,sensitivity,,,0.7109,,
+8,small_fp32,2,coarse VF,806,65,sensitivity,0.9,0.87,0.9231,0.8939,True
+8,small_fp32,2,rapid VT,226,14,sensitivity,0.75,0.67,0.9558,0.9213,True
+8,small_fp32,2,NSR,2578,72,specificity,0.99,0.97,0.9833,0.9737,False
+8,small_fp32,2,other non-shockable,2189,671,specificity,0.95,0.88,0.9269,0.9088,False
+8,small_fp32,2,asystole,77,26,specificity,0.95,0.92,0.961,0.8723,False
+8,small_fp32,2,fine VF,3,2,sensitivity,,,0.0,,
+8,small_fp32,2,other VT,339,105,sensitivity,,,0.6224,,
+8,small_int8,2,coarse VF,806,65,sensitivity,0.9,0.87,0.9268,0.8981,True
+8,small_int8,2,rapid VT,226,14,sensitivity,0.75,0.67,0.9558,0.9213,True
+8,small_int8,2,NSR,2578,72,specificity,0.99,0.97,0.9822,0.9715,False
+8,small_int8,2,other non-shockable,2189,671,specificity,0.95,0.88,0.9237,0.9048,False
+8,small_int8,2,asystole,77,26,specificity,0.95,0.92,0.961,0.8723,False
+8,small_int8,2,fine VF,3,2,sensitivity,,,0.0,,
+8,small_int8,2,other VT,339,105,sensitivity,,,0.6313,,
+8,scratch_k50_fp32,2,coarse VF,806,65,sensitivity,0.9,0.87,0.9194,0.8877,True
+8,scratch_k50_fp32,2,rapid VT,226,14,sensitivity,0.75,0.67,0.969,0.9252,True
+8,scratch_k50_fp32,2,NSR,2578,72,specificity,0.99,0.97,0.9899,0.983,False
+8,scratch_k50_fp32,2,other non-shockable,2189,671,specificity,0.95,0.88,0.9493,0.9341,False
+8,scratch_k50_fp32,2,asystole,77,26,specificity,0.95,0.92,0.9351,0.7872,False
+8,scratch_k50_fp32,2,fine VF,3,2,sensitivity,,,0.0,,
+8,scratch_k50_fp32,2,other VT,339,105,sensitivity,,,0.6932,,
+8,scratch_k50_int8,2,coarse VF,806,65,sensitivity,0.9,0.87,0.7878,0.725,False
+8,scratch_k50_int8,2,rapid VT,226,14,sensitivity,0.75,0.67,0.9558,0.9156,True
+8,scratch_k50_int8,2,NSR,2578,72,specificity,0.99,0.97,0.993,0.9872,True
+8,scratch_k50_int8,2,other non-shockable,2189,671,specificity,0.95,0.88,0.968,0.958,True
+8,scratch_k50_int8,2,asystole,77,26,specificity,0.95,0.92,1.0,1.0,True
+8,scratch_k50_int8,2,fine VF,3,2,sensitivity,,,0.0,,
+8,scratch_k50_int8,2,other VT,339,105,sensitivity,,,0.6578,,
+8,small_fp32,3,coarse VF,806,65,sensitivity,0.9,0.87,0.9181,0.885,True
+8,small_fp32,3,rapid VT,226,14,sensitivity,0.75,0.67,0.9425,0.9022,True
+8,small_fp32,3,NSR,2578,72,specificity,0.99,0.97,0.9767,0.9638,False
+8,small_fp32,3,other non-shockable,2189,671,specificity,0.95,0.88,0.9146,0.8916,False
+8,small_fp32,3,asystole,77,26,specificity,0.95,0.92,0.987,0.9574,True
+8,small_fp32,3,fine VF,3,2,sensitivity,,,0.0,,
+8,small_fp32,3,other VT,339,105,sensitivity,,,0.6372,,
+8,small_int8,3,coarse VF,806,65,sensitivity,0.9,0.87,0.9206,0.8879,True
+8,small_int8,3,rapid VT,226,14,sensitivity,0.75,0.67,0.9425,0.9022,True
+8,small_int8,3,NSR,2578,72,specificity,0.99,0.97,0.974,0.9598,False
+8,small_int8,3,other non-shockable,2189,671,specificity,0.95,0.88,0.9109,0.8863,False
+8,small_int8,3,asystole,77,26,specificity,0.95,0.92,0.987,0.9574,True
+8,small_int8,3,fine VF,3,2,sensitivity,,,0.0,,
+8,small_int8,3,other VT,339,105,sensitivity,,,0.6401,,
+8,scratch_k50_fp32,3,coarse VF,806,65,sensitivity,0.9,0.87,0.9268,0.8935,True
+8,scratch_k50_fp32,3,rapid VT,226,14,sensitivity,0.75,0.67,0.9425,0.9036,True
+8,scratch_k50_fp32,3,NSR,2578,72,specificity,0.99,0.97,0.9853,0.9754,False
+8,scratch_k50_fp32,3,other non-shockable,2189,671,specificity,0.95,0.88,0.9625,0.9502,True
+8,scratch_k50_fp32,3,asystole,77,26,specificity,0.95,0.92,0.961,0.8723,False
+8,scratch_k50_fp32,3,fine VF,3,2,sensitivity,,,0.0,,
+8,scratch_k50_fp32,3,other VT,339,105,sensitivity,,,0.6549,,
+8,scratch_k50_int8,3,coarse VF,806,65,sensitivity,0.9,0.87,0.8933,0.8531,False
+8,scratch_k50_int8,3,rapid VT,226,14,sensitivity,0.75,0.67,0.9513,0.9091,True
+8,scratch_k50_int8,3,NSR,2578,72,specificity,0.99,0.97,0.981,0.9704,False
+8,scratch_k50_int8,3,other non-shockable,2189,671,specificity,0.95,0.88,0.9548,0.9451,True
+8,scratch_k50_int8,3,asystole,77,26,specificity,0.95,0.92,0.7273,0.6508,False
+8,scratch_k50_int8,3,fine VF,3,2,sensitivity,,,0.3333,,
+8,scratch_k50_int8,3,other VT,339,105,sensitivity,,,0.6608,,
+9,small_fp32,0,coarse VF,704,64,sensitivity,0.9,0.87,0.9048,0.8649,False
+9,small_fp32,0,rapid VT,197,14,sensitivity,0.75,0.67,0.9594,0.9182,True
+9,small_fp32,0,NSR,2299,72,specificity,0.99,0.97,0.9761,0.9622,False
+9,small_fp32,0,other non-shockable,1998,668,specificity,0.95,0.88,0.9184,0.8915,False
+9,small_fp32,0,asystole,70,26,specificity,0.95,0.92,0.9429,0.8286,False
+9,small_fp32,0,fine VF,2,2,sensitivity,,,0.0,,
+9,small_fp32,0,other VT,315,103,sensitivity,,,0.6222,,
+9,small_int8,0,coarse VF,704,64,sensitivity,0.9,0.87,0.9119,0.8737,True
+9,small_int8,0,rapid VT,197,14,sensitivity,0.75,0.67,0.9645,0.929,True
+9,small_int8,0,NSR,2299,72,specificity,0.99,0.97,0.9748,0.9603,False
+9,small_int8,0,other non-shockable,1998,668,specificity,0.95,0.88,0.9144,0.8869,False
+9,small_int8,0,asystole,70,26,specificity,0.95,0.92,0.9429,0.8286,False
+9,small_int8,0,fine VF,2,2,sensitivity,,,0.0,,
+9,small_int8,0,other VT,315,103,sensitivity,,,0.5873,,
+9,scratch_k50_fp32,0,coarse VF,704,64,sensitivity,0.9,0.87,0.9276,0.8884,True
+9,scratch_k50_fp32,0,rapid VT,197,14,sensitivity,0.75,0.67,0.9746,0.9444,True
+9,scratch_k50_fp32,0,NSR,2299,72,specificity,0.99,0.97,0.9874,0.9798,False
+9,scratch_k50_fp32,0,other non-shockable,1998,668,specificity,0.95,0.88,0.9414,0.9239,False
+9,scratch_k50_fp32,0,asystole,70,26,specificity,0.95,0.92,0.8286,0.5714,False
+9,scratch_k50_fp32,0,fine VF,2,2,sensitivity,,,1.0,,
+9,scratch_k50_fp32,0,other VT,315,103,sensitivity,,,0.5365,,
+9,scratch_k50_int8,0,coarse VF,704,64,sensitivity,0.9,0.87,0.9062,0.8644,False
+9,scratch_k50_int8,0,rapid VT,197,14,sensitivity,0.75,0.67,0.9645,0.9353,True
+9,scratch_k50_int8,0,NSR,2299,72,specificity,0.99,0.97,0.9856,0.9772,False
+9,scratch_k50_int8,0,other non-shockable,1998,668,specificity,0.95,0.88,0.9114,0.8848,False
+9,scratch_k50_int8,0,asystole,70,26,specificity,0.95,0.92,0.9143,0.7667,False
+9,scratch_k50_int8,0,fine VF,2,2,sensitivity,,,0.5,,
+9,scratch_k50_int8,0,other VT,315,103,sensitivity,,,0.5429,,
+9,small_fp32,1,coarse VF,704,64,sensitivity,0.9,0.87,0.8991,0.8551,False
+9,small_fp32,1,rapid VT,197,14,sensitivity,0.75,0.67,0.9492,0.9206,True
+9,small_fp32,1,NSR,2299,72,specificity,0.99,0.97,0.9517,0.928,False
+9,small_fp32,1,other non-shockable,1998,668,specificity,0.95,0.88,0.9054,0.8728,False
+9,small_fp32,1,asystole,70,26,specificity,0.95,0.92,1.0,1.0,True
+9,small_fp32,1,fine VF,2,2,sensitivity,,,0.0,,
+9,small_fp32,1,other VT,315,103,sensitivity,,,0.5651,,
+9,small_int8,1,coarse VF,704,64,sensitivity,0.9,0.87,0.9034,0.8614,False
+9,small_int8,1,rapid VT,197,14,sensitivity,0.75,0.67,0.9594,0.9339,True
+9,small_int8,1,NSR,2299,72,specificity,0.99,0.97,0.9465,0.9212,False
+9,small_int8,1,other non-shockable,1998,668,specificity,0.95,0.88,0.9019,0.8689,False
+9,small_int8,1,asystole,70,26,specificity,0.95,0.92,1.0,1.0,True
+9,small_int8,1,fine VF,2,2,sensitivity,,,0.0,,
+9,small_int8,1,other VT,315,103,sensitivity,,,0.5841,,
+9,scratch_k50_fp32,1,coarse VF,704,64,sensitivity,0.9,0.87,0.9148,0.8737,True
+9,scratch_k50_fp32,1,rapid VT,197,14,sensitivity,0.75,0.67,0.9695,0.9299,True
+9,scratch_k50_fp32,1,NSR,2299,72,specificity,0.99,0.97,0.9917,0.9864,True
+9,scratch_k50_fp32,1,other non-shockable,1998,668,specificity,0.95,0.88,0.9595,0.9477,True
+9,scratch_k50_fp32,1,asystole,70,26,specificity,0.95,0.92,0.8286,0.5683,False
+9,scratch_k50_fp32,1,fine VF,2,2,sensitivity,,,0.0,,
+9,scratch_k50_fp32,1,other VT,315,103,sensitivity,,,0.6286,,
+9,scratch_k50_int8,1,coarse VF,704,64,sensitivity,0.9,0.87,0.8935,0.8486,False
+9,scratch_k50_int8,1,rapid VT,197,14,sensitivity,0.75,0.67,0.934,0.8718,True
+9,scratch_k50_int8,1,NSR,2299,72,specificity,0.99,0.97,0.9896,0.984,False
+9,scratch_k50_int8,1,other non-shockable,1998,668,specificity,0.95,0.88,0.9304,0.9058,False
+9,scratch_k50_int8,1,asystole,70,26,specificity,0.95,0.92,0.2286,0.123,False
+9,scratch_k50_int8,1,fine VF,2,2,sensitivity,,,0.5,,
+9,scratch_k50_int8,1,other VT,315,103,sensitivity,,,0.5968,,
+9,small_fp32,2,coarse VF,704,64,sensitivity,0.9,0.87,0.8793,0.8324,False
+9,small_fp32,2,rapid VT,197,14,sensitivity,0.75,0.67,0.9442,0.9048,True
+9,small_fp32,2,NSR,2299,72,specificity,0.99,0.97,0.9652,0.9466,False
+9,small_fp32,2,other non-shockable,1998,668,specificity,0.95,0.88,0.9279,0.9013,False
+9,small_fp32,2,asystole,70,26,specificity,0.95,0.92,0.9857,0.9571,True
+9,small_fp32,2,fine VF,2,2,sensitivity,,,0.0,,
+9,small_fp32,2,other VT,315,103,sensitivity,,,0.5746,,
+9,small_int8,2,coarse VF,704,64,sensitivity,0.9,0.87,0.8849,0.8396,False
+9,small_int8,2,rapid VT,197,14,sensitivity,0.75,0.67,0.9543,0.9238,True
+9,small_int8,2,NSR,2299,72,specificity,0.99,0.97,0.9635,0.9432,False
+9,small_int8,2,other non-shockable,1998,668,specificity,0.95,0.88,0.9249,0.8973,False
+9,small_int8,2,asystole,70,26,specificity,0.95,0.92,0.9857,0.9571,True
+9,small_int8,2,fine VF,2,2,sensitivity,,,0.0,,
+9,small_int8,2,other VT,315,103,sensitivity,,,0.5778,,
+9,scratch_k50_fp32,2,coarse VF,704,64,sensitivity,0.9,0.87,0.9205,0.8815,True
+9,scratch_k50_fp32,2,rapid VT,197,14,sensitivity,0.75,0.67,0.9645,0.9207,True
+9,scratch_k50_fp32,2,NSR,2299,72,specificity,0.99,0.97,0.993,0.9879,True
+9,scratch_k50_fp32,2,other non-shockable,1998,668,specificity,0.95,0.88,0.967,0.9559,True
+9,scratch_k50_fp32,2,asystole,70,26,specificity,0.95,0.92,0.8143,0.5435,False
+9,scratch_k50_fp32,2,fine VF,2,2,sensitivity,,,0.0,,
+9,scratch_k50_fp32,2,other VT,315,103,sensitivity,,,0.581,,
+9,scratch_k50_int8,2,coarse VF,704,64,sensitivity,0.9,0.87,0.7685,0.7,False
+9,scratch_k50_int8,2,rapid VT,197,14,sensitivity,0.75,0.67,0.8883,0.8078,True
+9,scratch_k50_int8,2,NSR,2299,72,specificity,0.99,0.97,0.9957,0.9921,True
+9,scratch_k50_int8,2,other non-shockable,1998,668,specificity,0.95,0.88,0.953,0.9319,True
+9,scratch_k50_int8,2,asystole,70,26,specificity,0.95,0.92,0.9714,0.9211,True
+9,scratch_k50_int8,2,fine VF,2,2,sensitivity,,,0.0,,
+9,scratch_k50_int8,2,other VT,315,103,sensitivity,,,0.473,,
+9,small_fp32,3,coarse VF,704,64,sensitivity,0.9,0.87,0.9006,0.8594,False
+9,small_fp32,3,rapid VT,197,14,sensitivity,0.75,0.67,0.9492,0.9064,True
+9,small_fp32,3,NSR,2299,72,specificity,0.99,0.97,0.9765,0.9651,False
+9,small_fp32,3,other non-shockable,1998,668,specificity,0.95,0.88,0.9299,0.9104,False
+9,small_fp32,3,asystole,70,26,specificity,0.95,0.92,1.0,1.0,True
+9,small_fp32,3,fine VF,2,2,sensitivity,,,0.0,,
+9,small_fp32,3,other VT,315,103,sensitivity,,,0.6381,,
+9,small_int8,3,coarse VF,704,64,sensitivity,0.9,0.87,0.9062,0.865,False
+9,small_int8,3,rapid VT,197,14,sensitivity,0.75,0.67,0.9543,0.9097,True
+9,small_int8,3,NSR,2299,72,specificity,0.99,0.97,0.9739,0.9617,False
+9,small_int8,3,other non-shockable,1998,668,specificity,0.95,0.88,0.9244,0.9034,False
+9,small_int8,3,asystole,70,26,specificity,0.95,0.92,1.0,1.0,True
+9,small_int8,3,fine VF,2,2,sensitivity,,,0.0,,
+9,small_int8,3,other VT,315,103,sensitivity,,,0.6508,,
+9,scratch_k50_fp32,3,coarse VF,704,64,sensitivity,0.9,0.87,0.9162,0.8819,True
+9,scratch_k50_fp32,3,rapid VT,197,14,sensitivity,0.75,0.67,0.9594,0.9372,True
+9,scratch_k50_fp32,3,NSR,2299,72,specificity,0.99,0.97,0.9874,0.9783,False
+9,scratch_k50_fp32,3,other non-shockable,1998,668,specificity,0.95,0.88,0.964,0.9539,True
+9,scratch_k50_fp32,3,asystole,70,26,specificity,0.95,0.92,0.8571,0.6522,False
+9,scratch_k50_fp32,3,fine VF,2,2,sensitivity,,,0.5,,
+9,scratch_k50_fp32,3,other VT,315,103,sensitivity,,,0.5429,,
+9,scratch_k50_int8,3,coarse VF,704,64,sensitivity,0.9,0.87,0.8466,0.7991,False
+9,scratch_k50_int8,3,rapid VT,197,14,sensitivity,0.75,0.67,0.9086,0.8494,True
+9,scratch_k50_int8,3,NSR,2299,72,specificity,0.99,0.97,0.9883,0.9798,False
+9,scratch_k50_int8,3,other non-shockable,1998,668,specificity,0.95,0.88,0.9595,0.946,True
+9,scratch_k50_int8,3,asystole,70,26,specificity,0.95,0.92,0.7571,0.6759,False
+9,scratch_k50_int8,3,fine VF,2,2,sensitivity,,,0.5,,
+9,scratch_k50_int8,3,other VT,315,103,sensitivity,,,0.5206,,
+10,small_fp32,0,coarse VF,638,63,sensitivity,0.9,0.87,0.8903,0.8502,False
+10,small_fp32,0,rapid VT,177,14,sensitivity,0.75,0.67,0.9492,0.9115,True
+10,small_fp32,0,NSR,2088,72,specificity,0.99,0.97,0.9852,0.9756,False
+10,small_fp32,0,other non-shockable,1863,668,specificity,0.95,0.88,0.9517,0.94,True
+10,small_fp32,0,asystole,65,26,specificity,0.95,0.92,0.9692,0.9062,False
+10,small_fp32,0,fine VF,2,2,sensitivity,,,0.0,,
+10,small_fp32,0,other VT,291,105,sensitivity,,,0.5601,,
+10,small_int8,0,coarse VF,638,63,sensitivity,0.9,0.87,0.895,0.8561,False
+10,small_int8,0,rapid VT,177,14,sensitivity,0.75,0.67,0.9605,0.9241,True
+10,small_int8,0,NSR,2088,72,specificity,0.99,0.97,0.9852,0.9756,False
+10,small_int8,0,other non-shockable,1863,668,specificity,0.95,0.88,0.949,0.9374,False
+10,small_int8,0,asystole,65,26,specificity,0.95,0.92,0.9538,0.8594,False
+10,small_int8,0,fine VF,2,2,sensitivity,,,0.0,,
+10,small_int8,0,other VT,291,105,sensitivity,,,0.567,,
+10,scratch_k50_fp32,0,coarse VF,638,63,sensitivity,0.9,0.87,0.884,0.8402,False
+10,scratch_k50_fp32,0,rapid VT,177,14,sensitivity,0.75,0.67,0.9322,0.8686,True
+10,scratch_k50_fp32,0,NSR,2088,72,specificity,0.99,0.97,0.9933,0.9871,True
+10,scratch_k50_fp32,0,other non-shockable,1863,668,specificity,0.95,0.88,0.9748,0.9679,True
+10,scratch_k50_fp32,0,asystole,65,26,specificity,0.95,0.92,0.9077,0.7674,False
+10,scratch_k50_fp32,0,fine VF,2,2,sensitivity,,,0.5,,
+10,scratch_k50_fp32,0,other VT,291,105,sensitivity,,,0.5223,,
+10,scratch_k50_int8,0,coarse VF,638,63,sensitivity,0.9,0.87,0.7226,0.6472,False
+10,scratch_k50_int8,0,rapid VT,177,14,sensitivity,0.75,0.67,0.887,0.7842,True
+10,scratch_k50_int8,0,NSR,2088,72,specificity,0.99,0.97,0.9947,0.99,True
+10,scratch_k50_int8,0,other non-shockable,1863,668,specificity,0.95,0.88,0.9737,0.9646,True
+10,scratch_k50_int8,0,asystole,65,26,specificity,0.95,0.92,0.9846,0.95,True
+10,scratch_k50_int8,0,fine VF,2,2,sensitivity,,,0.0,,
+10,scratch_k50_int8,0,other VT,291,105,sensitivity,,,0.488,,
+10,small_fp32,1,coarse VF,638,63,sensitivity,0.9,0.87,0.8777,0.8417,False
+10,small_fp32,1,rapid VT,177,14,sensitivity,0.75,0.67,0.9548,0.9106,True
+10,small_fp32,1,NSR,2088,72,specificity,0.99,0.97,0.9708,0.9559,False
+10,small_fp32,1,other non-shockable,1863,668,specificity,0.95,0.88,0.9206,0.8938,False
+10,small_fp32,1,asystole,65,26,specificity,0.95,0.92,1.0,1.0,True
+10,small_fp32,1,fine VF,2,2,sensitivity,,,0.0,,
+10,small_fp32,1,other VT,291,105,sensitivity,,,0.5979,,
+10,small_int8,1,coarse VF,638,63,sensitivity,0.9,0.87,0.8887,0.8543,False
+10,small_int8,1,rapid VT,177,14,sensitivity,0.75,0.67,0.9492,0.9064,True
+10,small_int8,1,NSR,2088,72,specificity,0.99,0.97,0.9693,0.9534,False
+10,small_int8,1,other non-shockable,1863,668,specificity,0.95,0.88,0.9136,0.8863,False
+10,small_int8,1,asystole,65,26,specificity,0.95,0.92,1.0,1.0,True
+10,small_int8,1,fine VF,2,2,sensitivity,,,0.0,,
+10,small_int8,1,other VT,291,105,sensitivity,,,0.6082,,
+10,scratch_k50_fp32,1,coarse VF,638,63,sensitivity,0.9,0.87,0.931,0.9003,True
+10,scratch_k50_fp32,1,rapid VT,177,14,sensitivity,0.75,0.67,0.9605,0.9167,True
+10,scratch_k50_fp32,1,NSR,2088,72,specificity,0.99,0.97,0.9947,0.9904,True
+10,scratch_k50_fp32,1,other non-shockable,1863,668,specificity,0.95,0.88,0.9651,0.9549,True
+10,scratch_k50_fp32,1,asystole,65,26,specificity,0.95,0.92,0.8462,0.619,False
+10,scratch_k50_fp32,1,fine VF,2,2,sensitivity,,,0.5,,
+10,scratch_k50_fp32,1,other VT,291,105,sensitivity,,,0.6323,,
+10,scratch_k50_int8,1,coarse VF,638,63,sensitivity,0.9,0.87,0.8918,0.8466,False
+10,scratch_k50_int8,1,rapid VT,177,14,sensitivity,0.75,0.67,0.9548,0.909,True
+10,scratch_k50_int8,1,NSR,2088,72,specificity,0.99,0.97,0.9952,0.9909,True
+10,scratch_k50_int8,1,other non-shockable,1863,668,specificity,0.95,0.88,0.9345,0.9104,False
+10,scratch_k50_int8,1,asystole,65,26,specificity,0.95,0.92,0.3692,0.2143,False
+10,scratch_k50_int8,1,fine VF,2,2,sensitivity,,,0.5,,
+10,scratch_k50_int8,1,other VT,291,105,sensitivity,,,0.6048,,
+10,small_fp32,2,coarse VF,638,63,sensitivity,0.9,0.87,0.8981,0.8656,False
+10,small_fp32,2,rapid VT,177,14,sensitivity,0.75,0.67,0.9548,0.9243,True
+10,small_fp32,2,NSR,2088,72,specificity,0.99,0.97,0.9703,0.9494,False
+10,small_fp32,2,other non-shockable,1863,668,specificity,0.95,0.88,0.9184,0.893,False
+10,small_fp32,2,asystole,65,26,specificity,0.95,0.92,1.0,1.0,True
+10,small_fp32,2,fine VF,2,2,sensitivity,,,0.0,,
+10,small_fp32,2,other VT,291,105,sensitivity,,,0.5739,,
+10,small_int8,2,coarse VF,638,63,sensitivity,0.9,0.87,0.9013,0.8688,False
+10,small_int8,2,rapid VT,177,14,sensitivity,0.75,0.67,0.9548,0.9243,True
+10,small_int8,2,NSR,2088,72,specificity,0.99,0.97,0.9693,0.9479,False
+10,small_int8,2,other non-shockable,1863,668,specificity,0.95,0.88,0.9141,0.8873,False
+10,small_int8,2,asystole,65,26,specificity,0.95,0.92,0.9846,0.9531,True
+10,small_int8,2,fine VF,2,2,sensitivity,,,0.0,,
+10,small_int8,2,other VT,291,105,sensitivity,,,0.5808,,
+10,scratch_k50_fp32,2,coarse VF,638,63,sensitivity,0.9,0.87,0.9028,0.8533,False
+10,scratch_k50_fp32,2,rapid VT,177,14,sensitivity,0.75,0.67,0.9718,0.9351,True
+10,scratch_k50_fp32,2,NSR,2088,72,specificity,0.99,0.97,0.989,0.9806,False
+10,scratch_k50_fp32,2,other non-shockable,1863,668,specificity,0.95,0.88,0.9576,0.9435,True
+10,scratch_k50_fp32,2,asystole,65,26,specificity,0.95,0.92,0.8923,0.7442,False
+10,scratch_k50_fp32,2,fine VF,2,2,sensitivity,,,0.0,,
+10,scratch_k50_fp32,2,other VT,291,105,sensitivity,,,0.5361,,
+10,scratch_k50_int8,2,coarse VF,638,63,sensitivity,0.9,0.87,0.815,0.7496,False
+10,scratch_k50_int8,2,rapid VT,177,14,sensitivity,0.75,0.67,0.9548,0.9176,True
+10,scratch_k50_int8,2,NSR,2088,72,specificity,0.99,0.97,0.989,0.9807,False
+10,scratch_k50_int8,2,other non-shockable,1863,668,specificity,0.95,0.88,0.964,0.9515,True
+10,scratch_k50_int8,2,asystole,65,26,specificity,0.95,0.92,1.0,1.0,True
+10,scratch_k50_int8,2,fine VF,2,2,sensitivity,,,0.0,,
+10,scratch_k50_int8,2,other VT,291,105,sensitivity,,,0.4433,,
+10,small_fp32,3,coarse VF,638,63,sensitivity,0.9,0.87,0.8621,0.8197,False
+10,small_fp32,3,rapid VT,177,14,sensitivity,0.75,0.67,0.9548,0.9189,True
+10,small_fp32,3,NSR,2088,72,specificity,0.99,0.97,0.9818,0.9711,False
+10,small_fp32,3,other non-shockable,1863,668,specificity,0.95,0.88,0.9452,0.9303,False
+10,small_fp32,3,asystole,65,26,specificity,0.95,0.92,1.0,1.0,True
+10,small_fp32,3,fine VF,2,2,sensitivity,,,0.0,,
+10,small_fp32,3,other VT,291,105,sensitivity,,,0.5636,,
+10,small_int8,3,coarse VF,638,63,sensitivity,0.9,0.87,0.8699,0.8288,False
+10,small_int8,3,rapid VT,177,14,sensitivity,0.75,0.67,0.9605,0.9241,True
+10,small_int8,3,NSR,2088,72,specificity,0.99,0.97,0.9818,0.9711,False
+10,small_int8,3,other non-shockable,1863,668,specificity,0.95,0.88,0.9399,0.9234,False
+10,small_int8,3,asystole,65,26,specificity,0.95,0.92,1.0,1.0,True
+10,small_int8,3,fine VF,2,2,sensitivity,,,0.0,,
+10,small_int8,3,other VT,291,105,sensitivity,,,0.5842,,
+10,scratch_k50_fp32,3,coarse VF,638,63,sensitivity,0.9,0.87,0.9279,0.8903,True
+10,scratch_k50_fp32,3,rapid VT,177,14,sensitivity,0.75,0.67,0.9605,0.925,True
+10,scratch_k50_fp32,3,NSR,2088,72,specificity,0.99,0.97,0.9914,0.9832,True
+10,scratch_k50_fp32,3,other non-shockable,1863,668,specificity,0.95,0.88,0.9538,0.94,True
+10,scratch_k50_fp32,3,asystole,65,26,specificity,0.95,0.92,0.8462,0.619,False
+10,scratch_k50_fp32,3,fine VF,2,2,sensitivity,,,0.0,,
+10,scratch_k50_fp32,3,other VT,291,105,sensitivity,,,0.5704,,
+10,scratch_k50_int8,3,coarse VF,638,63,sensitivity,0.9,0.87,0.8229,0.7663,False
+10,scratch_k50_int8,3,rapid VT,177,14,sensitivity,0.75,0.67,0.9322,0.8944,True
+10,scratch_k50_int8,3,NSR,2088,72,specificity,0.99,0.97,0.9914,0.9832,True
+10,scratch_k50_int8,3,other non-shockable,1863,668,specificity,0.95,0.88,0.9705,0.963,True
+10,scratch_k50_int8,3,asystole,65,26,specificity,0.95,0.92,1.0,1.0,True
+10,scratch_k50_int8,3,fine VF,2,2,sensitivity,,,0.0,,
+10,scratch_k50_int8,3,other VT,291,105,sensitivity,,,0.4983,,
